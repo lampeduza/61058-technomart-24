@@ -1,0 +1,115 @@
+body {
+	font-family: 'Cuprum', sans-serif;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-header {
+	background-color: #f3f7f8;
+}
+
+.main-header-top {
+	background-color: #293449;
+}
+
+.main-header-top .header-logo {
+	background-color: #ee3643;
+	border-bottom: 5px solid #b52933;
+}
+
+.search .search-label {
+	font-size: 17px;
+	line-height: 18px;
+	color: #fff;
+}
+
+.search input[type="search"] {
+	
+}
+
+.main-header-top .bookmark-link,
+.main-header-top .basket-link {
+	font-size: 17px;
+	line-height: 18px;
+	color: #fff;
+}
+
+.main-header-top .btn-order {
+	background-color: #63a63e;
+	font-size: 17px;
+	line-height: 18px;
+	color: #fff;
+}
+
+.main-header .page-title {
+	color: #ee3643;
+	font-size: 16px;
+	line-height: 23px;
+	font-style: italic;
+}
+
+.main-header .navigation-contacts {
+	border: 3px solid #fff;
+}
+.main-header .phone-number {
+	color: #ee3643;
+	font-size: 21px;
+	line-height: 21px;
+}
+
+.main-header .address {
+	color: #32425c;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.main-header .user-link {
+	color: #000;
+	font-size: 21px;
+	line-height: 21px;
+	background-color: #fff;
+}
+
+.main-header .site-navigation {
+	list-style: none;
+	background-color: #32425c;
+}
+
+.main-header .site-navigation a {
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
