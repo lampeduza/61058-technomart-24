@@ -1,6 +1,71 @@
+/* Cuprum normal */
+
+@font-face {
+	font-family: 'Cuprum';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('../fonts/cuprum.woff2') format('woff2'),
+	     url('../fonts/cuprum.woff') format('woff');
+}
+
+/* Cuprum bold */
+
+@font-face {
+	font-family: 'Cuprum';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('../fonts/cuprumbold.woff2') format('woff2'),
+	     url('../fonts/cuprumbold.woff') format('woff');
+}
+
+/* Cuprum bold italic */
+
+@font-face {
+	font-family: 'Cuprum';
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+	src: url('../fonts/cuprumbolditalic.woff2') format('woff2'),
+	     url('../fonts/cuprumbolditalic.woff') format('woff');
+}
+
+/* Cuprum italic */
+@font-face {
+	font-family: 'Cuprum';
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+	src: url('../fonts/cuprumitalic.woff2') format('woff2'),
+	     url('../fonts/cuprumitalic.woff') format('woff');
+}
+
+/* Pt Sans normal  */
+@font-face {
+	font-family: 'PT Sans';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('../fonts/ptsans.woff2') format('woff2'),
+	     url('../fonts/ptsans.woff') format('woff');
+}
+
+/* Pt Sans bold  */
+@font-face {
+	font-family: 'PT Sans';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('../fonts/ptsansbold.woff2') format('woff2'),
+	     url('../fonts/ptsansbold.woff') format('woff');
+}
+
 body {
-	font-family: 'Cuprum', sans-serif;
-	color: #fff;
+	font-family: 'Cuprum', Arial, sans-serif;
+	color: #000;
+	background-color: #fff;
+	margin: 0;
 }
 
 a {
@@ -15,85 +80,335 @@ a {
 	background-color: #293449;
 }
 
-.main-header-top .header-logo {
+.header-logo {
 	background-color: #ee3643;
 	border-bottom: 5px solid #b52933;
+	color: #fff;
 }
 
-.search .search-label {
+.search-label {
 	font-size: 17px;
 	line-height: 18px;
 	color: #fff;
 }
 
-.search input[type="search"] {
-	
+.search-input {
+	background-color: #293448;
+	border: none;
 }
 
-.main-header-top .bookmark-link,
-.main-header-top .basket-link {
+.bookmark-link,
+.basket-link {
 	font-size: 17px;
 	line-height: 18px;
 	color: #fff;
 }
 
-.main-header-top .btn-order {
+.basket-full {
+	background-color: #ee3643;
+}
+
+.btn-order {
 	background-color: #63a63e;
 	font-size: 17px;
 	line-height: 18px;
 	color: #fff;
 }
 
-.main-header .page-title {
+.page-title {
 	color: #ee3643;
 	font-size: 16px;
 	line-height: 23px;
 	font-style: italic;
 }
 
-.main-header .navigation-contacts {
+.navigation-contacts {
 	border: 3px solid #fff;
 }
-.main-header .phone-number {
+.phone-number {
 	color: #ee3643;
 	font-size: 21px;
 	line-height: 21px;
 }
 
-.main-header .address {
+.address {
 	color: #32425c;
 	font-size: 14px;
 	line-height: 24px;
 }
 
-.main-header .user-link {
+.user-link {
 	color: #000;
 	font-size: 21px;
 	line-height: 21px;
 	background-color: #fff;
 }
 
-.main-header .site-navigation {
-	list-style: none;
-	background-color: #32425c;
+.person-link {
+	font-size: 21px;
+	line-height: 21px;
+	background-color: #fff;
+	color: #000;
 }
 
-.main-header .site-navigation a {
+.order-link,
+.parlour-link {
+	font-size: 16px;
+	line-height: 18px;
+	text-decoration: underline;
+	color: #32425c;
+}
+
+.site-navigation {
+	background-color: #32425c;
+	list-style: none;
+}
+
+.site-navigation a {
+	color: #fff;
+}
+
+/* BREADCRUMBS */
+.breadcrumbs {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+	color: #000;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.main-title {
+	font-size: 30px;
+	line-height: 30px;
+	color: #32425c;
+	text-transform: uppercase;
+}
+
+/* FILTER */
+fieldset {
+	border: none;
+}
+
+legend {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	font-size: 17px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.filter ul {
+	list-style: none;
+}
+
+.brands-list label,
+.power-list label {
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.btn-show {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	border: 1px solid #e5e5e5;
+}
+
+/* PRODUCT LIST */
+.product-item {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+}
+
+.product-item h3 {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: bold;
+}
+
+
+.product-item span,
+.product-item .price {
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.product-item span {
+	color: #999999;
+}
+
+.product-item .price {
+	background-color: #ee3643;
 	color: #fff;
 }
 
 
+.product-item .buy-link,
+.product-item .bookmarks-link {
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+.product-item .buy-link {
+	color: #fff;
+	background-color: #63a63e;
+}
+
+.product-item .bookmarks-link {
+	color: #32425c;
+	background-color: #fff;
+	border: 3px solid #63a63e;
+}
 
 
 
+/* DELIVERY */
+.delivery {
+	background-color: #f4f8f9;
+}
+.delivery-advantage p {
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.delivery-list {
+	list-style: none;
+	color: #fff;
+	background-color: #32425c;
+}
+
+.delivery-list a {
+	color: #fff;
+	font-size: 21px;
+	line-height: 30px;
+}
+
+.delivery-title {
+	font-size: 36px;
+	line-height: 36px;
+	color: #32425c;
+	text-transform: uppercase;
+}
+
+.delivery-container p {
+	font-size: 13px;
+	line-height: 24px;
+}
 
 
+/* INFORMATION */
+.services-title,
+.information-title,
+.contacts-title {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.information p {
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.collaboration {
+	list-style: none;
+}
+
+.collaboration li {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+/* Red buttons */
+.information .about-company,
+.contacts .write-us,
+.brands .brands-btn,
+.popular-products .popular-products-btn {
+	background-color: #ee3643;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
 
 
+/* FOOTER */
 
+.footer-top {
+	background-color: #32425c;
+}
+.footer-logo {
+	background-color: #ee3643;
+	color: #fff;
+	border-bottom: 5px solid #b52933;
+	text-align: center;
+}
 
+.footer-top p {
+	color: #fff;
+	font-size: 18px;
+	line-height: 24px;
+}
 
+.footer-phone {
+	color: #fff;
+}
 
+.footer-navigation,
+.footer-offers {
+	list-style: none;
+}
+
+.footer-navigation a {
+	color: #fff;
+}
+
+.footer-offers a {
+	color: #ffd180;
+}
+
+.footer-bottom {
+	background-color: #293449;
+}
+
+.copyright {
+	color: #fff;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.footer-bottom-social {
+	list-style: none;
+}
+
+.btn-social {
+	background-color: #212a3a;
+}
+
+.feedback,
+.designed-by {
+	color: #fff;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.feedback a,
+.designed-by a {
+	color: #ffd180;
+}
 
 
 
