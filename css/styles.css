@@ -74,10 +74,7 @@ a {
 
 .main-header {
 	background-color: #f3f7f8;
-}
-
-.main-header-top {
-	background-color: #293449;
+	width: 100%;
 }
 
 .header-logo {
@@ -95,6 +92,7 @@ a {
 .search-input {
 	background-color: #293448;
 	border: none;
+	font-family: inherit;
 }
 
 .bookmark-link,
@@ -125,6 +123,7 @@ a {
 .navigation-contacts {
 	border: 3px solid #fff;
 }
+
 .phone-number {
 	color: #ee3643;
 	font-size: 21px;
@@ -168,10 +167,26 @@ a {
 	color: #fff;
 }
 
+/* MAIN */
+
+/* offers */
+
+/*slider */
+.slider .slider-list {
+	list-style: none;
+}
+
+.slider-control ul {
+	list-style: none;
+}
+
 /* BREADCRUMBS */
 .breadcrumbs {
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
 
 .breadcrumbs a,
@@ -186,10 +201,20 @@ a {
 	font-size: 30px;
 	line-height: 30px;
 	color: #32425c;
+	background-color: #f2f6f8;
 	text-transform: uppercase;
 }
 
 /* FILTER */
+.filters {
+	width: 220px;
+	margin-right: 20px;
+}
+
+.main-filter-row {
+	display: flex;
+}
+
 fieldset {
 	border: none;
 }
@@ -220,12 +245,43 @@ legend {
 	border: 1px solid #e5e5e5;
 }
 
+/* SORTING */
+.sorting {
+	width: 700px;
+}
+.sorting-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+
+.product-list-column {
+	width: 700px;
+	display: flex;
+	flex-direction: column;
+}
+
 /* PRODUCT LIST */
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 32px;
+}
 .product-item {
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	background-color: #fff;
 	border: 1px solid #e5e5e5;
 	text-align: center;
+	width: 220px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.product-item:nth-child(3n) {
+	margin-right: 0;
 }
 
 .product-item h3 {
@@ -271,7 +327,56 @@ legend {
 	border: 3px solid #63a63e;
 }
 
+/* pagination list */
+.pagination-list {
+	list-style: none;
+	margin: 0;
+	display: flex;
+	font-size: 13px;
+	line-height: 18px;
+	font-family: 'PT-Sans', 'Arial', sanf-serif;
+}
 
+.pagination-list .pagination-item-current a {
+	background-color: #ee3643;
+	color: #fff;
+}
+
+.pagination-item {
+	margin-right: 10px;
+	border: 1px solid #e5e5e5;
+}
+
+.pagination-item a {
+	display: block;
+	text-transform: uppercase;
+	color: #000;
+}
+
+/* ABOUT PERFORATORS */
+.perforator-about-wrapper {
+	background-color: #f2f6f8;
+}
+
+.perforator-about {
+	padding-top: 67px;
+	padding-bottom: 73px;
+}
+
+.perforator-about h2 {
+	font-size: 30px;
+	line-height: 30px;
+	margin: 0;
+	margin-bottom: 35px;
+	padding: 0;
+}
+
+.perforator-about p {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 24px;
+}
 
 /* DELIVERY */
 .delivery {
@@ -323,6 +428,7 @@ legend {
 
 .collaboration {
 	list-style: none;
+	padding: 0;
 }
 
 .collaboration li {
@@ -409,13 +515,231 @@ legend {
 	color: #ffd180;
 }
 
+/* Состояния header-logo   */
+.header-logo:hover {
+	background-color: #ca2c37;
+}
+
+.header-logo:active {
+	background-color: #ba2732;
+}
+
+.footer {
+	width: 100%;
+}
+
+/* Состояния footer-logo   */
+.footer-logo:hover {
+	background-color: #ca2c37;
+}
+
+.footer-logo:active {
+	background-color: #ba2732;
+}
+
+/* Состояния search */
+
+.search-input:hover ~ .search-btn .search-icon {
+	fill: #fff;
+}
+
+.search-input:focus {
+	background-color: #fff;
+	outline: none;
+}
+
+.search-input:focus ~ .search-btn .search-icon {
+	fill: #ee3643;
+}
+
+/* Состояния bookmark */
+
+/* Состояния basket */
+
+/* Состояния btn-order */
+.btn-order:hover {
+	background-color: #5fbb2d;
+}
+
+.btn-order:active {
+	background-color: #518534;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/* Состояния user-link */
+.user-link:hover {
+	color: #ee3643;
+}
+
+.user-link:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+/* Состояния order-link, parlour-link */
+.order-link:hover,
+.parlour-link:hover {
+	color: #ee3643;
+}
+
+.order-link:active,
+.parlour-link:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+/* Состояния site-navigation */
+.site-navigation a:hover {
+	background-color: #293449;
+}
+
+.site-navigation a:active {
+	background-color: #1d2739;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+ /* Состояния information */
+ .information .about-company:hover,
+ .information .write-us:hover {
+ 	background-color: #ca2c37;
+ }
+
+ .information .about-company:active,
+ .information .write-us:active {
+ 	background-color: #ba2732;
+ }
+
+/* Состояния footer-navigation */
+.footer-navigation a:hover {
+	text-decoration: underline;
+}
+
+.footer-navigation a:active {
+	color: rgba(241, 245, 247, 0.5);
+	text-decoration: none;
+}
+
+/* Состояния footer-offers */
+.footer-offers a:hover {
+	text-decoration: underline;
+}
+
+.footer-offers a:active {
+	color: rgba(255, 209, 128, 0.5);
+	text-decoration: none;
+}
+
+/* Состояния feedback */
+.feedback a:hover {
+	color: #ffd180;
+	text-decoration: underline;
+}
+
+.feedback a:active {
+	color: #ee3643;
+	text-decoration: none;
+}
+
+/* Состояния btn-social */
+.designed-by a:hover {
+	color: #ffd180;
+	text-decoration: underline;
+}
+
+.designed-by a:active {
+	color: #ee3643;
+	text-decoration: none;
+}
 
 
+/* Сеточные стили */
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header-top-row {
+	display: flex;
+}
 
 
+.header-top-wrapper {
+	background-color: #293449;
+	margin-bottom: 46px;
+	min-height: 42px;
+}
+
+.user-navigation-row {
+	display: flex;
+}
+
+.site-navigation {
+	width: 940px;
+	min-height: 60px;
+}
+.site-navigation-row {
+	display: flex;
+	align-items: center;
+}
+
+/* INFORMATION */
+.information {
+	margin-bottom: 86px;
+}
+.information-row {
+	display: flex;
+}
+
+.information-review {
+	width: 620px;
+	margin-right: 20px;
+}
+
+.contacts {
+	width: 300px;
+}
+
+.information-review,
+.contacts {
+	min-height: 370px;
+}
+
+/* FOOTER */
+.footer-top-row {
+	display: flex;
+}
+
+.footer-bottom-row {
+	display: flex;
+}
+
+.footer-contact {
+	width: 380px;
+	margin-right: 10px;
+}
+
+.footer-navigation {
+	width: 550px;
+}
+
+.footer-bottom .copyright {
+	width: 230px;
+}
+
+.footer-bottom-social {
+	width: 150px;
+}
+
+.footer-bottom .feedback,
+.footer-bottom .designed-by {
+	width: 140px;
+}
 
 
-
+/* modal */
+.modal {
+	display: none;
+}
 
 
 
