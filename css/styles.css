@@ -643,6 +643,16 @@ legend {
 .footer-top {
 	background-color: #32425c;
 }
+
+.footer-top-row {
+	display: flex;
+}
+
+.footer-contact {
+	width: 380px;
+	margin-right: 10px;
+}
+
 .footer-logo {
 	background-color: #ee3643;
 	color: #fff;
@@ -670,6 +680,12 @@ legend {
 .footer-navigation,
 .footer-offers {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-navigation {
+	width: 550px;
 }
 
 .footer-navigation a {
@@ -702,14 +718,25 @@ legend {
 	background-color: #293449;
 }
 
+.footer-bottom-row {
+	display: flex;
+}
+
 .copyright {
 	color: #fff;
 	font-size: 16px;
 	line-height: 18px;
 }
 
+.copyright {
+	width: 230px;
+}
+
 .footer-bottom-social {
+	width: 150px;
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .btn-social {
@@ -718,6 +745,7 @@ legend {
 
 .feedback,
 .designed-by {
+	width: 140px;
 	color: #fff;
 	font-size: 16px;
 	line-height: 18px;
@@ -747,46 +775,6 @@ legend {
 	color: #ee3643;
 	text-decoration: none;
 }
-
-
-/* Сеточные стили */
-
-
-/* INFORMATION */
-
-
-
-/* FOOTER */
-.footer-top-row {
-	display: flex;
-}
-
-.footer-bottom-row {
-	display: flex;
-}
-
-.footer-contact {
-	width: 380px;
-	margin-right: 10px;
-}
-
-.footer-navigation {
-	width: 550px;
-}
-
-.footer-bottom .copyright {
-	width: 230px;
-}
-
-.footer-bottom-social {
-	width: 150px;
-}
-
-.footer-bottom .feedback,
-.footer-bottom .designed-by {
-	width: 140px;
-}
-
 
 /* modal */
 .modal {
