@@ -105,7 +105,6 @@ img {
 .header-top-wrapper {
 	background-color: #293449;
 	margin-bottom: 46px;
-	min-height: 42px;
 }
 
 .header-top-row {
@@ -113,35 +112,46 @@ img {
 }
 
 .header-logo-link {
-	width: 111px;
-	height: 18px;
+	width: 220px;
+	height: 47px;
 	background-color: #ee3643;
 	box-shadow: 0 5px 0 0 #b52933;
+	padding: 13px 54px 16px 55px;
 }
 
-.header-logo {}
-
-.header-logo:hover {
+.header-logo-link:hover {
 	background-color: #ca2c37;
 }
 
-.header-logo:active {
+.header-logo-link:active {
 	background-color: #ba2732;
 }
 
+.search {
+	position: relative;
+}
+
 .search-label {
+	position: absolute;
+	top: 14px;
+	left: 49px;
+	z-index: 4;
+
 	font-size: 17px;
 	line-height: 18px;
 	color: #fff;
 }
 
 .search-input {
+	width: 270px;
+	height: 42px;
+
 	background-color: #293448;
 	border: none;
 	font-family: inherit;
 	font-size: 17px;
 	line-height: 18px;
-	font-weight: 600;
+	font-weight: normal;
 }
 
 .search-input:hover ~ .search-btn .search-icon {
@@ -151,10 +161,30 @@ img {
 .search-input:focus {
 	background-color: #fff;
 	outline: none;
+	padding-left: 49px;
+}
+
+.search-input:focus ~ .search-label {
+	display: none;
 }
 
 .search-input:focus ~ .search-btn .search-icon {
 	fill: #ee3643;
+}
+
+.search-btn {
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	top: 12px;
+	left: 17px;
+	z-index: 3;
+	border: none;
+	background: transparent;
+	fill: rgba(255, 255, 255, 0.5);
+	outline: none;
+	padding: 0;
+	margin: 0;
 }
 
 .bookmark-link,
@@ -189,7 +219,7 @@ img {
 	font-size: 16px;
 	line-height: 23px;
 	font-style: italic;
-	font-weight: 600;
+	font-weight: normal;
 }
 
 .navigation-contacts {}
@@ -280,7 +310,9 @@ img {
 
 .offers-card {}
 
-.offers-card-title {}
+.offers-title {
+	font-weight: bold;
+}
 
 .offers-btn {}
 
@@ -607,7 +639,6 @@ legend {
 .collaboration li {
 	font-size: 18px;
 	line-height: 20px;
-	font-weight: 600;
 }
 
 .contacts {
