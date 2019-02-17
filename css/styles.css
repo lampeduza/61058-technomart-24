@@ -159,7 +159,7 @@ input[type="radio"].visually-hidden {
 	font-family: inherit;
 	font-size: 17px;
 	line-height: 18px;
-	font-weight: normal;
+	font-weight: 400;
 	color: #fff;
 }
 
@@ -511,6 +511,10 @@ legend {
 }
 
 /* SORTING */
+.product-list-column {
+	width: 700px;
+}
+
 .sorting {
 	width: 700px;
 }
@@ -519,11 +523,6 @@ legend {
 	margin: 0;
 	padding: 0;
 	display: flex;
-}
-
-
-.product-list-column {
-	width: 700px;
 }
 
 /* PRODUCT LIST */
@@ -606,7 +605,7 @@ legend {
 	border: 1px solid #e5e5e5;
 }
 
-.pagination-item-current .pagination-link {
+.pagination-item .pagination-link-current {
 	background-color: #ee3643;
 	color: #fff;
 }
