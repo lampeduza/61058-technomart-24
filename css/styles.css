@@ -457,7 +457,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	background-color: #32425c;
@@ -469,7 +469,9 @@ input[type="radio"].visually-hidden {
 .site-navigation a {
 	color: #fff;
 	display: block;
-	padding: 18px 41px 18px 42.2px;
+	padding: 22px 31px 26px 31px;
+	font-size: 17px;
+	line-height: 17px;
 }
 
 .site-navigation a:hover {
@@ -490,7 +492,14 @@ input[type="radio"].visually-hidden {
 
 /* offers */
 .offers-title {
-	font-weight: bold;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.offers-btn {
+	font-size: 14px;
+	line-height: 18px;
 }
 
 
@@ -499,6 +508,18 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.slider-title {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.slider-item span {
+	font-size: 18px;
+	line-height: 24px;
 }
 
 .slider-dots {
@@ -511,10 +532,13 @@ input[type="radio"].visually-hidden {
 .breadcrumbs {
 	display: flex;
 	align-items: center;
-	font-family: 'PT Sans', 'Arial', sans-serif;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.breadcrumbs-item {
+	font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 .breadcrumbs a,
@@ -528,19 +552,26 @@ input[type="radio"].visually-hidden {
 .main-title {
 	font-size: 30px;
 	line-height: 30px;
+	font-weight: 400;
 	color: #32425c;
 	background-color: #f2f6f8;
 	text-transform: uppercase;
 }
 
 /* FILTER */
+
+.main-filter-row {
+	display: flex;
+}
+
 .filters {
 	width: 220px;
 	margin-right: 20px;
 }
 
-.main-filter-row {
-	display: flex;
+.filter-title {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	text-transform: uppercase;
 }
 
 fieldset {
@@ -555,11 +586,15 @@ legend {
 	text-transform: uppercase;
 }
 
-.filter ul {
-	list-style: none;
+.range-input::value {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	color: #000;
+	font-size: 17px;
+	line-height: 18px;
 }
 
-.brands-list {
+.brands-list,
+.power-list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -567,6 +602,8 @@ legend {
 
 .brands-list label,
 .power-list label {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	text-transform: uppercase;
 	font-size: 15px;
 	line-height: 20px;
 }
@@ -579,6 +616,15 @@ legend {
 	border: 1px solid #e5e5e5;
 }
 
+/* POPULAR PRODUCTS */
+.popular-product-title {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 400;
+	color: #32425c;
+	text-transform: uppercase;
+}
+
 /* SORTING */
 .product-list-column {
 	width: 700px;
@@ -586,12 +632,33 @@ legend {
 
 .sorting {
 	width: 700px;
+	background-color: #f7f3ec;
 }
+
+.sorting-title {
+	text-transform: uppercase;
+}
+
 .sorting-list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
+}
+.by-price {
+	color: #ee3643;
+}
+
+.by-type,
+.by-functionality {
+	color: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px dotted #ee3643;
+}
+
+.by-price,
+.by-type,
+.by-functionality {
+	text-transform: uppercase;
 }
 
 /* PRODUCT LIST */
@@ -600,8 +667,8 @@ legend {
 	flex-wrap: wrap;
 	margin-bottom: 32px;
 }
+
 .product-item {
-	font-family: 'PT Sans', 'Arial', sans-serif;
 	background-color: #fff;
 	border: 1px solid #e5e5e5;
 	text-align: center;
@@ -618,12 +685,13 @@ legend {
 .product-item h3 {
 	font-size: 18px;
 	line-height: 20px;
-	font-weight: bold;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 
 .product-item del,
 .product-item .price {
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 17px;
 	line-height: 18px;
 	font-weight: bold;
@@ -658,15 +726,22 @@ legend {
 	border: 3px solid #63a63e;
 }
 
+/* brands */
+.brands-title {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 400;
+	color: #32425c;
+	text-transform: uppercase;
+}
+
+
 /* pagination list */
 .pagination-list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
-	font-size: 13px;
-	line-height: 18px;
-	font-family: 'PT-Sans', 'Arial', sanf-serif;
 }
 
 .pagination-item {
@@ -680,6 +755,9 @@ legend {
 }
 
 .pagination-link{
+	font-family: 'PT-Sans', 'Arial', sanf-serif;
+	font-size: 13px;
+	line-height: 18px;
 	display: block;
 	text-transform: uppercase;
 	color: #000;
@@ -698,9 +776,9 @@ legend {
 .perforator-about h2 {
 	font-size: 30px;
 	line-height: 30px;
+	font-weight: 400;
 	margin: 0;
 	margin-bottom: 35px;
-	padding: 0;
 }
 
 .perforator-about p {
@@ -711,6 +789,11 @@ legend {
 .delivery {
 	background-color: #f4f8f9;
 }
+
+.services-title {
+
+}
+
 .delivery-advantage p {
 	margin: 0;
 }
@@ -730,6 +813,7 @@ legend {
 .delivery-title {
 	font-size: 36px;
 	line-height: 36px;
+	font-weight: 400;
 	color: #32425c;
 	text-transform: uppercase;
 }
@@ -747,6 +831,7 @@ legend {
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	font-weight: 400;
 }
 
 .information {
@@ -857,6 +942,12 @@ legend {
 	padding: 0;
 }
 
+.footer-navigation a,
+.footer-offers a {
+	font-size: 18px;
+	line-height: 24px;
+}
+
 .footer-navigation {
 	width: 550px;
 }
@@ -896,15 +987,13 @@ legend {
 }
 
 .copyright {
+	width: 240px;
 	color: #fff;
 	font-size: 16px;
 	line-height: 18px;
 }
 
-.copyright {
-	width: 230px;
-}
-
+/* social */
 .footer-bottom-social {
 	width: 150px;
 	list-style: none;
@@ -916,12 +1005,21 @@ legend {
 	background-color: #212a3a;
 }
 
+/* feedback */
+.feedback {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.designed-by {
+	font-size: 16px;
+	line-height: 18px;
+}
+
 .feedback,
 .designed-by {
 	width: 140px;
 	color: #fff;
-	font-size: 16px;
-	line-height: 18px;
 }
 
 .feedback a,

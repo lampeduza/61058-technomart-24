@@ -75,7 +75,7 @@
 			<section class="filters">
 				<h2>Каталог товаров</h2>
 				<form class="filter" method="get" action="https://echo.htmlacademy.ru">
-					<span>Фильтр:</span>
+					<span class="filter-title">Фильтр:</span>
 					<fieldset>
 						<legend>Цена:</legend>
 						<div class="range-control">
@@ -83,9 +83,13 @@
 							<button class="range-toggle range-toggle-min"></button>
 							<button class="range-toggle range-toggle-max"></button>
 						</div>
-						<label aria-label="Минимальное значение цены"><input type="text" value="0"></label>
+						<label aria-label="Минимальное значение цены">
+							<input class="range-input" type="text" value="0">
+						</label>
 						<span>-</span>
-						<label aria-label="Максимальное значение цены"><input type="text" value="30000"></label>
+						<label aria-label="Максимальное значение цены">
+							<input class="range-input" type="text" value="30000">
+						</label>
 					</fieldset>
 					<fieldset>
 						<legend>Производители:</legend>
@@ -132,11 +136,11 @@
 			<!-- SORTING-->
 			<div class="product-list-column">
 				<div class="sorting">
-					<span>Сортировка:</span>
+					<span class="sorting-title">Сортировка:</span>
 					<ul class="sorting-list">
-						<li><a href="#">По цене</a></li>
-						<li><a href="#">По типу</a></li>
-						<li><a href="#">По функционалу</a></li>
+						<li><a class="by-price" href="#">По цене</a></li>
+						<li><a class="by-type" href="#">По типу</a></li>
+						<li><a class="by-functionality" href="#">По функционалу</a></li>
 						<li><a class="arrow-up" aria-label="по возрастанию"></a></li>
 						<li><a class="arrow-down" aria-label="по убыванию"></a></li>
 					</ul>
