@@ -276,7 +276,6 @@ input[type="radio"].visually-hidden {
 .page-title {
 	width: 300px;
 	margin: 0;
-	margin-right: 20px;
 	padding-left: 54px;
 	padding-right: 36px;
 	color: #ee3643;
@@ -289,7 +288,6 @@ input[type="radio"].visually-hidden {
 .navigation-contacts {
 	display: flex;
 	flex-direction: column;
-	margin-right: 68px;
 }
 
 .phone-number {
@@ -356,7 +354,7 @@ input[type="radio"].visually-hidden {
 }
 
 .login-link {
-	margin-right: ;
+	margin-left: auto;
 }
 
 .registration-link {
@@ -372,12 +370,16 @@ input[type="radio"].visually-hidden {
 	background-image: none;
 }
 
+.person-container {
+	margin-left: auto;
+}
+
 .person-link {
 	font-size: 21px;
 	line-height: 21px;
 	background-color: #fff;
 	color: #000;
-	padding: 13px 66px 12px 48px;
+	padding: 12px 66px 12px 48px;
 	width: 300px;
 	display: block;
 	position: relative;
@@ -439,6 +441,7 @@ input[type="radio"].visually-hidden {
 	text-decoration: underline;
 	color: #32425c;
 	display: inline-block;
+	vertical-align: top;
 }
 
 .order-link:hover,
