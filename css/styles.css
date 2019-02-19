@@ -220,11 +220,12 @@ input[type="radio"].visually-hidden {
 }
 
 .basket-link {
-	padding: 12px 36px 12px 44px;
+	width: 150px;
+	padding: 12px 22px 12px 44px;
 }
 
 .basket-full {
-	padding: 12px 31px 12px 44px;
+	padding: 12px 22px 12px 44px;
 	background-color: #ee3643;
 }
 
@@ -510,7 +511,7 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 }
 
-.slider-title {
+.slide-title {
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: 600;
