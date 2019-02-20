@@ -597,6 +597,8 @@ input[type="radio"].visually-hidden {
 
 fieldset {
 	border: none;
+	padding: 0;
+	margin: 0;
 }
 
 legend {
@@ -605,6 +607,7 @@ legend {
 	line-height: 30px;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin-bottom: 15px;
 }
 
 .range-input::value {
@@ -627,6 +630,69 @@ legend {
 	text-transform: uppercase;
 	font-size: 15px;
 	line-height: 20px;
+	margin: 0;
+}
+
+.filter-option {
+	padding-left: 34px;
+	margin-bottom: 17px;
+}
+
+.filter-option label {
+	user-select: none;
+	display: block;
+	position: relative;
+	cursor: pointer;
+}
+
+.filter-input-checkbox + label::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -35px;
+	transform: translateY(-50%);
+	width: 23px;
+	height: 23px;
+	border: 2px solid #c5c5c5;
+	border-radius: 2px;
+}
+
+.filter-input-checkbox:checked + label::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -35px;
+	transform: translateY(-50%);
+	width: 27px;
+	height: 23px;
+	background: url('../img/icons/checkbox-on.svg') no-repeat 0 0;
+}
+
+.filter-input-radio + label::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -35px;
+	transform: translateY(-50%);
+	width: 25px;
+	height: 25px;
+	border: 3px solid #c5c5c5;
+	border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -27px;
+	transform: translateY(-50%);
+	border: 5px solid #c5c5c5;
+	border-radius: 50%;
+}
+
+.filter-input:disabled + label {
+	color: #000;
+	opacity: 0.5;
 }
 
 .btn-show {
@@ -635,16 +701,46 @@ legend {
 	line-height: 18px;
 	text-transform: uppercase;
 	border: 1px solid #e5e5e5;
+	padding: 10px 39px 9px 39px;
+	width: 140px;
+	margin-top: 75px;
 }
 
+
+
+
 /* POPULAR PRODUCTS */
-.popular-product-title {
+.popular-products-title {
+	background-color: #f9f5f0;
+	display: flex;
+	align-items: center;
+}
+
+.popular-products h2 {
 	font-size: 30px;
 	line-height: 30px;
 	font-weight: 400;
 	color: #32425c;
 	text-transform: uppercase;
+	margin: 0;
+	margin-right: 373px;
+	padding-left: 30px;
+	padding-top: 29px;
+	padding-bottom: 30px;
 }
+
+.popular-products-btn {
+	padding: 10px 55px;
+
+}
+
+.popular-products-items {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+
 
 /* SORTING */
 .product-list-column {
@@ -797,6 +893,10 @@ legend {
 	color: rgba(50, 66, 92, 0.3);
 }
 
+.actions .bookmarks {
+	color: rgba(50, 66, 92, 0.3);
+}
+
 .image {
 	width: 218px;
 	height: 170px;
@@ -858,11 +958,7 @@ legend {
 	border-bottom-color: transparent;
 }
 
-/* popular-products-items */
-.popular-products-items {
-	display: flex;
-	justify-content: space-between;
-}
+
 
 
 
@@ -872,6 +968,29 @@ legend {
 
 
 /* brands */
+.popular-brands-title {
+	background-color: #f9f5f0;
+	display: flex;
+    align-items: center;
+}
+
+.popular-brands-title h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #32425c;
+    text-transform: uppercase;
+    margin: 0;
+    margin-right: 269px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 29px;
+}
+
+.popular-brands-title .brands-btn {
+	padding: 10px 70px 10px 69px;
+}
+
 .brands-title {
 	font-size: 30px;
 	line-height: 30px;
