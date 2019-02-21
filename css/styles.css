@@ -686,7 +686,9 @@ legend {
 	top: 50%;
 	left: -27px;
 	transform: translateY(-50%);
-	border: 5px solid #c5c5c5;
+	width: 9px;
+	height: 9px;
+	background-color: #c5c5c5;
 	border-radius: 50%;
 }
 
@@ -705,8 +707,6 @@ legend {
 	width: 140px;
 	margin-top: 75px;
 }
-
-
 
 
 /* POPULAR PRODUCTS */
@@ -736,10 +736,16 @@ legend {
 
 .popular-products-items {
 	display: flex;
-	justify-content: space-between;
 	margin-bottom: 20px;
 }
 
+.popular-products-items .catalog-item {
+	margin-right: 20px;
+}
+
+.popular-products-items .catalog-item:nth-child(4n) {
+	margin-right: 0;
+}
 
 
 /* SORTING */
@@ -778,22 +784,11 @@ legend {
 	text-transform: uppercase;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* PRODUCT LIST */
 .catalog-items {
 	width: 700px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 }
 
 .catalog-item {
@@ -803,8 +798,13 @@ legend {
 	min-height: 318px;
 	border: 1px solid #e5e5e5;
 	margin-top: 20px;
+	margin-right: 20px;
 
 	position: relative;
+}
+
+.catalog-items .catalog-item:nth-of-type(3n) {
+	margin-right: 0;
 }
 
 .catalog-item .actions {
@@ -958,15 +958,6 @@ legend {
 	border-bottom-color: transparent;
 }
 
-
-
-
-
-
-
-
-
-
 /* brands */
 .popular-brands-title {
 	background-color: #f9f5f0;
@@ -991,14 +982,34 @@ legend {
 	padding: 10px 70px 10px 69px;
 }
 
-.brands-title {
-	font-size: 30px;
-	line-height: 30px;
-	font-weight: 400;
-	color: #32425c;
-	text-transform: uppercase;
+.brands-items {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 940px;
+	margin-bottom: 85px;
 }
 
+.brands-item {
+	width: 220px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.brands-item:nth-child(4n) {
+	margin-right: 0;
+}
+
+.brands-item a {
+	width: 220px;
+	height: 145px;
+	border: 1px solid #eaeaea;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 /* pagination list */
 .pagination-list {
@@ -1052,26 +1063,39 @@ legend {
 /* DELIVERY */
 .delivery {
 	background-color: #f4f8f9;
+	padding-top: 68px;
+}
+
+.delivery-advantage {
+	width: 423px;
+	margin-bottom: 74px;
 }
 
 .services-title {
-
+	margin: 0;
+	margin-bottom: 30px;
 }
 
 .delivery-advantage p {
 	margin: 0;
+	font-family: 'PT-Sans', 'Arial', sans-serif;
 }
 
 .delivery-list {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	color: #fff;
 	background-color: #32425c;
+	width: 240px;
 }
 
 .delivery-list a {
 	color: #fff;
 	font-size: 21px;
 	line-height: 30px;
+	display: block;
+	padding: 20px 23px;
 }
 
 .delivery-title {
@@ -1080,11 +1104,14 @@ legend {
 	font-weight: 400;
 	color: #32425c;
 	text-transform: uppercase;
+	margin: 0;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
-.delivery-container p {
+.delivery-process p {
 	font-size: 13px;
 	line-height: 24px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 
@@ -1092,6 +1119,7 @@ legend {
 .services-title,
 .information-title,
 .contacts-title {
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -1099,7 +1127,8 @@ legend {
 }
 
 .information {
-	margin-bottom: 86px;
+	padding-bottom: 86px;
+	padding-top: 82px;
 }
 
 .information-row {
@@ -1112,24 +1141,75 @@ legend {
 	width: 520px;
 }
 
+.information-title {
+	margin: 0;
+	margin-bottom: 35px;
+}
+
 .information p {
 	font-size: 13px;
 	line-height: 24px;
+	 margin: 0;
+	 margin-bottom: 30px;
+}
+
+.information p:nth-of-type(2) {
+	margin-bottom: 25px;
 }
 
 .collaboration {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	margin-bottom: 37px;
 }
 
 .collaboration li {
 	font-size: 18px;
 	line-height: 20px;
+	margin-bottom: 20px;
+	padding-left: 35px;
+
+	position: relative;
 }
 
+.collaboration li:last-child {
+	margin-bottom: 0;
+}
+
+.collaboration li::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 25px;
+	height: 2px;
+	background-color: #ee3643;
+}
+
+.about-company {
+	display: inline-block;
+	padding: 10px 40px 10px 41px;
+}
+
+/* contacts */ 
 .contacts {
 	width: 300px;
+}
+
+.contacts-title {
+	margin: 0;
+	margin-bottom: 35px;
+}
+
+.map-location {
+	margin-bottom: 40px;
+}
+
+.write-us {
+	display: inline-block;
+	padding: 10px 59px 10px 63px;
 }
 
 /* Red buttons */
