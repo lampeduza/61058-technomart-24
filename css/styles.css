@@ -1076,6 +1076,7 @@ legend {
 .delivery {
 	background-color: #f4f8f9;
 	padding-top: 68px;
+	padding-bottom: 99px;
 }
 
 .delivery-advantage {
@@ -1093,21 +1094,53 @@ legend {
 	font-family: 'PT-Sans', 'Arial', sans-serif;
 }
 
-.delivery-list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	color: #fff;
-	background-color: #32425c;
-	width: 240px;
+.delivery-container {
+	display: flex;
+	position: relative;
 }
 
-.delivery-list a {
+.delivery-controls {
+	color: #fff;
+	width: 240px;
+	margin-right: 60px;
+}
+
+.delivery-control {
+	width: 240px;
 	color: #fff;
 	font-size: 21px;
 	line-height: 30px;
 	display: block;
-	padding: 20px 23px;
+	padding: 16px 23px;
+	background-color: #32425c;
+	border: none;
+}
+
+.delivery-control:hover {
+	background-color: #293449;
+}
+
+.delivery-control:active {
+	background-color: #fff;
+	color: #32425c;
+}
+
+.delivery-control:focus {
+	outline: none;
+	background-color: #fff;
+	color: #32425c;
+}
+
+.delivery-slider {
+	display: flex;
+	display: row;
+	width: 620px;
+}
+
+.delivery-slider-content {
+	display: flex;
+	flex-direction: column;
+	width: 275px;
 }
 
 .delivery-title {
@@ -1117,15 +1150,25 @@ legend {
 	color: #32425c;
 	text-transform: uppercase;
 	margin: 0;
+	margin-bottom: 35px;
 	font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
-.delivery-process p {
+.delivery-slider-content p {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	margin: 0;
 	font-size: 13px;
 	line-height: 24px;
-	font-family: 'PT Sans', 'Arial', sans-serif;
+	width: 275px;
 }
 
+.delivery-img {
+	width: 468px;
+	height: 261px;
+	position: absolute;
+	top: 21px;
+	right: 0;
+}
 
 /* INFORMATION */
 .services-title,
