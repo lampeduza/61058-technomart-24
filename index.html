@@ -58,41 +58,37 @@
 	<!-- MAIN -->
 	<main class="main">
 		<!-- OFFERS -->
-			<section class="offers">
-				<div class="container">
-				<div class="offers-card">
+		<section class="offers">
+			<div class="container">
+				<div class="offers-card offers-card-material">
 					<h3 class="offers-title">Материалы</h3>
-					<a href="#" class="offers-btn btn-materials">На любой вкус</a>
+					<a href="#" class="offers-btn">На любой вкус</a>
 				</div>
-				<div class="offers-card">
+				<div class="offers-card offers-card-tools">
 					<h3 class="offers-title">Инструмент</h3>
-					<a href="#" class="offers-btn btn-instruments">На все случаи</a>
+					<a href="#" class="offers-btn">На все случаи</a>
 				</div>
-				<div class="offers-card">
+				<div class="offers-card offers-card-technique">
 					<h3 class="offers-title">Техника</h3>
-					<a href="#" class="offers-btn btn-equipment">Для стройки</a>
-				</div>
-				<div class="offers-card">
-					<h3 class="offers-title">Скидки 50%</h3>
-					<a href="#" class="offers-btn btn-discounts">На 350 товаров</a>
-				</div>
-				<div class="offers-card">
-					<h3 class="offers-title">Доставка</h3>
-					<a href="#" class="offers-btn btn-delivery">Бесплатно</a>
+					<a href="#" class="offers-btn">Для стройки</a>
 				</div>
 
 				<!-- slider -->
 				<section class="slider">
 					<ul class="slider-list">
-						<li class="slider-item slide">
-							<h2 class="slide-title">Дрели</h2>
-							<span>Соседям на радость</span>
-							<a class="slider-link" href="#">Открыть каталог</a>
+						<li class="slider-item slider-item-current">
+							<div class="slider-top">
+							    <h2 class="slide-title">Дрели</h2>
+							    <p class="slider-text">Соседям на радость</p>
+						    </div>
+						    <a class="slider-link" href="#">Открыть каталог</a>
 						</li>
-						<li class="slider-item slide">
-							<h2 class="slide-title">Перфоратор</h2>
-							<span>Настоящие мужские игрушки</span>
-							<a class="slider-link" href="#">Открыть каталог</a>
+						<li class="slider-item">
+							<div class="slider-top">
+							    <h2 class="slide-title">Перфоратор</h2>
+							    <p class="slider-text">Настоящие мужские игрушки</p>
+							    <a class="slider-link" href="#">Открыть каталог</a>
+						    </div>
 						</li>
 					</ul>
 					<div class="slider-controls">
@@ -101,13 +97,21 @@
 							<button class="slider-next" type="button" aria-label="Следующий слайд"></button>
 						</div>
 						<ul class="slider-dots">
-							<li><button class="slider-dot" type="button"></button></li>
+							<li><button class="slider-dot slider-dot-current" type="button"></button></li>
 							<li><button class="slider-dot" type="button"></button></li>
 						</ul>
 					</div>
+				</section>
+				<div class="offers-card offers-card-sale">
+					<h3 class="offers-title">Скидки 50%</h3>
+					<a href="#" class="offers-btn">На 350 товаров</a>
 				</div>
-			</section>
-			</section>
+				<div class="offers-card offers-card-delivery">
+					<h3 class="offers-title">Доставка</h3>
+					<a href="#" class="offers-btn">Бесплатно</a>
+				</div>
+			</div>
+		</section>
 
 			<!-- POPULAR PRODUCTS -->
 			<section class="popular-products">
