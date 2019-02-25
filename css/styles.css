@@ -1812,7 +1812,6 @@ legend {
 
 
 .modal-feedback {
-	z-index: 10;
 	position: relative;
 	width: 620px;
 }
@@ -1861,18 +1860,30 @@ legend {
 .feedback-name-item input[type="text"],
 .feedback-email-item input[type="email"],
 .feedback-message-item textarea[name="message"] {
+	box-sizing: border-box;
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 18px;
-	color: #dee3e4;
-	border: 2px solid #dee3e4;
+	color: #999;
+	border: 2px solid #d7dcde;
 	margin-top: 13px;
 }
 
 .feedback-name-item input[type="text"],
 .feedback-email-item input[type="email"] {
 	width: 220px;
-	padding: 8px 0 8px 16px;
+	padding: 8px 16px 8px 16px;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+	border-color: #b5b5b5;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+	border-color: #ee3643;
+	outline: none;
 }
 
 .feedback-message-item textarea[name="message"] {
@@ -1881,25 +1892,32 @@ legend {
 	padding: 13px 0 0 16px;
 }
 
-.modal-close::before {
-	content: '';
+.modal-feedback .modal-close {
 	position: absolute;
+	width: 21px;
+	height: 21px;
+	border: 0;
+	font-size: 0;
 	top: 16px;
 	right: 9px;
+}
+
+.modal-feedback .modal-close::before,
+.modal-feedback .modal-close::after {
+	content: '';
+	position: absolute;
+	top: 9;
+	right: 0;
 	width: 21px;
 	height: 3px;
 	background-color: #ee3643;
+}
+
+.modal-feedback .modal-close::before {
 	transform: rotate(45deg);
 }
 
-.modal-close::after {
-	content: '';
-	position: absolute;
-	top: 16px;
-	right: 9px;
-	width: 21px;
-	height: 3px;
-	background-color: #ee3643;
+.modal-feedback .modal-close::after {
 	transform: rotate(-45deg);
 }
 
