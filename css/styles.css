@@ -1844,11 +1844,6 @@ legend {
 
 /* modal */
 
-.modal-map,
-.modal-card {
-	display: none;
-}
-
 
 /* modal feedback */
 .modal-feedback {
@@ -1989,7 +1984,143 @@ legend {
 	background-color: #ba2732;
 }
 
+/* modal map */
+.modal-map {
+	width: 940px;
+	height: 446px;
+	box-shadow: 0 0 15px 1px rgba(47, 42, 43, 0.5);
+	position: relative;
+}
 
+.modal-map .modal-close {
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	border: 0;
+	font-size: 0;
+	top: 9px;
+	right: 9px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.modal-map .modal-close::before,
+.modal-map .modal-close::after {
+	content: '';
+	position: absolute;
+	top: 9;
+	right: 0;
+	width: 21px;
+	height: 3px;
+	background-color: #ee3643;
+}
+
+.modal-map .modal-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-map .modal-close::after {
+	transform: rotate(-45deg);
+}
+
+/* modal card */
+.modal-card {
+	width: 620px;
+	height: 282px;
+	border-top: 7px solid #ee3643;
+	position: relative;
+}
+
+.modal-card span {
+	font-size: 30px;
+	line-height: 30px;
+	display: block;
+	padding: 75px 0 68px 179px;
+	position: relative;
+}
+
+.modal-card span::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 81px;
+	transform: translateY(-50%);
+	width: 66px;
+	height: 66px;
+	background: url('../img/icons/icon-mark.svg');
+}
+
+
+.modal-background {
+	background-color: #f1f1f1;
+	padding: 37px 80px;
+	display: flex;
+	align-items: center;
+}
+
+.btn-checkout,
+.btn-continue-shopping {
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 220px;
+}
+
+.btn-checkout {
+	background-color: #ee3643;
+	color: #fff;
+	padding: 10px 0 10px 0;
+	margin-right: 20px;
+}
+
+.btn-checkout:hover {
+	background-color: #ca2c37;
+}
+
+.btn-checkout:active {
+	background-color: #ba2732;
+}
+
+.btn-continue-shopping {
+	background-color: #fff;
+	border: none;
+	padding: 10px 0 10px 0;
+	cursor: pointer;
+	outline: none;
+}
+
+
+.modal-card .modal-close {
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	border: 0;
+	font-size: 0;
+	top: 9px;
+	right: 9px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.modal-card .modal-close::before,
+.modal-card .modal-close::after {
+	content: '';
+	position: absolute;
+	top: 9px;
+	right: 0;
+	width: 21px;
+	height: 3px;
+	background-color: #ee3643;
+}
+
+.modal-card .modal-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-card .modal-close::after {
+	transform: rotate(-45deg);
+}
 
 
 
