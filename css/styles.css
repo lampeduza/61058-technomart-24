@@ -154,7 +154,8 @@ input[type="radio"].visually-hidden {
 .search-input {
 	width: 270px;
 	height: 42px;
-	padding-left: 49px;
+	padding-left: 48px;
+	padding-bottom: 3px;
 	background-color: #293448;
 	border: none;
 	font-family: inherit;
@@ -188,8 +189,8 @@ input[type="radio"].visually-hidden {
 	width: 42px;
 	height: 42px;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 1px;
+	left: 4px;
 	border: none;
 	background: transparent;
 	fill: rgba(255, 255, 255, 0.5);
@@ -202,7 +203,6 @@ input[type="radio"].visually-hidden {
 .search-icon {
 	width: 17px;
 	height: 17px;
-
 }
 
 .bookmark-link,
@@ -222,11 +222,11 @@ input[type="radio"].visually-hidden {
 
 .basket-link {
 	width: 150px;
-	padding: 12px 12px 12px 44px;
+	padding: 12px 12px 12px 49px;
 }
 
 .basket-full {
-	padding: 12px 12px 12px 44px;
+	padding: 12px 10px 12px 49px;
 	background-color: #ee3643;
 }
 
@@ -235,7 +235,7 @@ input[type="radio"].visually-hidden {
 	content: '';
 	display: block;
 	position: absolute;
-	top: 13px;
+	top: 12px;
 	left: 17px;
 	width: 14px;
 	height: 16px;
@@ -250,6 +250,9 @@ input[type="radio"].visually-hidden {
 .basket-link::before {
 	background-image: url('../img/icons/icon-cart.svg');
 	background-repeat: no-repeat;
+	width: 15px;
+	height: 15px;
+	left: 18px
 }
 
 .btn-order {
@@ -278,14 +281,15 @@ input[type="radio"].visually-hidden {
 .user-navigation-row {
 	display: flex;
 	align-items: flex-start;
-	margin-bottom: 44px;
+	margin-bottom: 39px;
 }
 
 .page-title {
-	width: 300px;
+	width: 197px;
 	margin: 0;
-	padding-left: 54px;
-	padding-right: 36px;
+	margin-left: 52px;
+	margin-right: 71px;
+	margin-top: 3px;
 	color: #ee3643;
 	font-size: 16px;
 	line-height: 23px;
@@ -302,11 +306,13 @@ input[type="radio"].visually-hidden {
 	position: relative;
 
 	width: 270px;
-	padding: 9px 45px 9px 74px;
+	padding: 9px 0 9px 71px;
 	color: #ee3643;
 	font-size: 21px;
 	line-height: 21px;
 	border: 3px solid #fff;
+	display: inline-block;
+	margin-bottom: 4px;
 }
 
 .phone-number::before {
@@ -317,7 +323,7 @@ input[type="radio"].visually-hidden {
 	height: 19px;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 15px;
+	left: 12px;
 	background-image: url('../img/icons/icon-phone.svg');
 	background-repeat: no-repeat;
 }
@@ -337,20 +343,7 @@ input[type="radio"].visually-hidden {
 	font-size: 21px;
 	line-height: 21px;
 	background-color: #fff;
-	padding: 12px 32px 12px 50px;
-}
-
-.user-link::before {
-	content: '';
-	position: absolute;
-	display: block;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 14px;
-	width: 20px;
-	height: 17px;
-	background-image: url('../img/icons/icon-login.svg');
-
+	text-align: center;
 }
 
 .user-link:hover {
@@ -368,9 +361,23 @@ input[type="radio"].visually-hidden {
 
 .login-link {
 	margin-left: auto;
+	padding: 12px 27px 12px 47px;
+	width: 121px;
+}
+
+.login-link::before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 14px;
+	left: 14px;
+	width: 20px;
+	height: 17px;
+	background-image: url('../img/icons/icon-login.svg');
 }
 
 .registration-link {
+	width: 150px;
 	color: #000;
 	font-size: 21px;
 	line-height: 21px;
@@ -437,14 +444,14 @@ input[type="radio"].visually-hidden {
 	height: 5px;
 	position: absolute;
 	top: 50%;
-	right: -18px;
+	right: -19px;
 	transform: translateY(-50%);
 	background-image: url('../img/icons/icon-dot.png');
 	background-repeat: no-repeat;
 }
 
 .parlour-link {
-	margin-left: 13px;
+	margin-left: 11px;
 }
 
 .order-link,
@@ -455,6 +462,7 @@ input[type="radio"].visually-hidden {
 	color: #32425c;
 	display: inline-block;
 	vertical-align: top;
+	margin-top: 7px;
 }
 
 .order-link:hover,
@@ -488,7 +496,7 @@ input[type="radio"].visually-hidden {
 .site-navigation a {
 	color: #fff;
 	display: block;
-	padding: 22px 31px 26px 31px;
+	padding: 20px 31px 23px 31px;
 	font-size: 17px;
 	line-height: 17px;
 }
@@ -509,6 +517,7 @@ input[type="radio"].visually-hidden {
 /* MAIN */
 
 .main {
+	padding-top: 59px;
 	padding-bottom: 86px;
 }
 
@@ -521,7 +530,7 @@ input[type="radio"].visually-hidden {
 .offers-card {
 	display: inline-block;
 	width: 300px;
-	height: 121px;
+	height: 123px;
 	background-color: #000;
 	margin-right: 20px;
 	margin-bottom: 20px;
@@ -541,6 +550,19 @@ input[type="radio"].visually-hidden {
 	background-image: url('../img/icons/icon-materials.svg');
 	background-position: 213px 31px;
 	background-size: 44px 65px;
+	position: relative;
+}
+
+.offers-card-material::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 59px;
+	background-image: url('../img/new flag.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 .offers-card-tools {
@@ -580,8 +602,8 @@ input[type="radio"].visually-hidden {
 	line-height: 30px;
 	color: #fff;
 	margin: 0;
-	padding-top: 26px;
-	padding-left: 23px;
+	padding-top: 21px;
+	padding-left: 22px;
 }
 
 .offers-btn {
@@ -589,11 +611,12 @@ input[type="radio"].visually-hidden {
 	line-height: 18px;
 	color: #fff;
 	margin-left: 25px;
+    margin-top: 12px;
 	min-width: 135px;
 	display: inline-block;
+	text-transform: uppercase;
 	padding: 10px;
 	background-color: rgba(0, 0, 0, 0.1);
-	margin-top: 10px;
 	text-align: center;
 }
 
@@ -730,7 +753,6 @@ input[type="radio"].visually-hidden {
 	align-items: center;
 	list-style: none;
 	margin: 0;
-	margin-top: 23px;
 	padding: 0;
 }
 
@@ -1306,27 +1328,35 @@ legend {
 .pagination-list {
 	list-style: none;
 	margin: 0;
+	margin-top: 52px;
+	margin-bottom: 60px;
 	padding: 0;
 	display: flex;
 }
 
-.pagination-item {
+.pagination-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'PT-Sans', 'Arial', sanf-serif;
+	font-size: 13px;
+	line-height: 18px;
 	margin-right: 10px;
 	border: 1px solid #e5e5e5;
+	width: 38px;
+	height: 38px;
+	text-transform: uppercase;
+	color: #000;
 }
 
-.pagination-item .pagination-link-current {
+.pagination-link-current {
 	background-color: #ee3643;
 	color: #fff;
 }
 
-.pagination-link{
-	font-family: 'PT-Sans', 'Arial', sanf-serif;
-	font-size: 13px;
-	line-height: 18px;
-	display: block;
-	text-transform: uppercase;
-	color: #000;
+.pagination-item:last-child .pagination-link {
+	margin-right: 0;
+	width: 140px;
 }
 
 /* ABOUT PERFORATORS */
