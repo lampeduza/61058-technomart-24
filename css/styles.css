@@ -841,15 +841,6 @@ input[type="radio"].visually-hidden {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* FILTER */
 
 .main-filter-row {
@@ -946,22 +937,28 @@ input[type="radio"].visually-hidden {
 	left: 160px;
 }
 
+
+
+
 .price-controls {
-	font-size: 0;
+	display: flex;
 }
 
 .price-controls label {
-	display: inline-block;
 	width: 95px;
 	font-size: 17px;
 }
  
-.range-input {
+.price-controls .range-input {
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	color: #000;
 	font-size: 17px;
 	line-height: 18px;
 	text-align: center;
+	width: 95px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+
 }
 
 

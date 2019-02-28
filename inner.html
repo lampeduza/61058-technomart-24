@@ -75,31 +75,32 @@
 			<section class="filters">
 				<h2 class="visually-hidden">Каталог товаров</h2>
 				<form class="filter" method="get" action="https://echo.htmlacademy.ru">
+					<span class="filter-title">Фильтр:</span>
 
 
 
+					<fieldset class="filter-item">
+						<legend class="filter-item-title">Цена:</legend>
 
-						<span class="filter-title">Фильтр:</span>
-						<fieldset class="filter-item">
-							<legend class="filter-item-title">Цена:</legend>
-							<div class="range-controls">
-								<div class="range-scale">
-									<div class="bar"></div>
-								</div>
-								<button class="range-toggle range-toggle-min" type="button"></button>
-								<button class="range-toggle range-toggle-max" type="button"></button>
+						<div class="range-controls">
+							<div class="range-scale">
+								<div class="bar"></div>
 							</div>
-							<div class="price-controls">
-								<label class="min-price" aria-label="Минимальное значение цены">
-									<input class="range-input" type="text" value="0">
-								</label>
-								<span>-</span>
-								<label class="max-price" aria-label="Максимальное значение цены">
-									<input class="range-input" type="text" value="30000">
-								</label>
-							</div>
-						</fieldset>
+							<button class="range-toggle range-toggle-min" type="button"></button>
+							<button class="range-toggle range-toggle-max" type="button"></button>
+						</div>
 
+						<div class="price-controls">
+							<label class="min-price" aria-label="Минимальное значение цены">
+								<input class="range-input" type="text" value="0">
+							</label>
+							<span>-</span>
+							<label class="max-price" aria-label="Максимальное значение цены">
+								<input class="range-input" type="text" value="30000">
+							</label>
+						</div>
+						
+					</fieldset>
 
 
 
