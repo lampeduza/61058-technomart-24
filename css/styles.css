@@ -912,6 +912,7 @@ input[type="radio"].visually-hidden {
 	width: 20px;
 	height: 20px;
 	border: none;
+	cursor: pointer;
 }
 
 .range-toggle::before {
@@ -923,7 +924,6 @@ input[type="radio"].visually-hidden {
 	height: 20px;
 	background-color: #fff;
 	border-radius: 50%;
-	box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.35);
 }
 
 .range-toggle::after {
@@ -946,8 +946,23 @@ input[type="radio"].visually-hidden {
 	left: 160px;
 }
 
+.price-controls {
+	font-size: 0;
+}
 
-
+.price-controls label {
+	display: inline-block;
+	width: 95px;
+	font-size: 17px;
+}
+ 
+.range-input {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	color: #000;
+	font-size: 17px;
+	line-height: 18px;
+	text-align: center;
+}
 
 
 
@@ -966,13 +981,6 @@ legend {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 15px;
-}
-
-.range-input::value {
-	font-family: 'PT Sans', 'Arial', sans-serif;
-	color: #000;
-	font-size: 17px;
-	line-height: 18px;
 }
 
 .brands-list,
@@ -1343,16 +1351,6 @@ legend {
 	display: block;
 
 }
-
-
-
-
-
-
-
-
-
-
 
 /* brands */
 .popular-brands-title {
