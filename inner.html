@@ -75,22 +75,34 @@
 			<section class="filters">
 				<h2 class="visually-hidden">Каталог товаров</h2>
 				<form class="filter" method="get" action="https://echo.htmlacademy.ru">
-					<span class="filter-title">Фильтр:</span>
-					<fieldset>
-						<legend>Цена:</legend>
-						<div class="range-control">
-							<div class="range-scale"></div>
-							<button class="range-toggle range-toggle-min"></button>
-							<button class="range-toggle range-toggle-max"></button>
-						</div>
-						<label aria-label="Минимальное значение цены">
-							<input class="range-input" type="text" value="0">
-						</label>
-						<span>-</span>
-						<label aria-label="Максимальное значение цены">
-							<input class="range-input" type="text" value="30000">
-						</label>
-					</fieldset>
+
+
+
+
+						<span class="filter-title">Фильтр:</span>
+						<fieldset class="filter-item">
+							<legend class="filter-item-title">Цена:</legend>
+							<div class="range-controls">
+								<div class="range-scale">
+									<div class="bar"></div>
+								</div>
+								<button class="range-toggle range-toggle-min" type="button"></button>
+								<button class="range-toggle range-toggle-max" type="button"></button>
+							</div>
+							<div class="price-controls">
+								<label class="min-price" aria-label="Минимальное значение цены">
+									<input class="range-input" type="text" value="0">
+								</label>
+								<span>-</span>
+								<label class="max-price" aria-label="Максимальное значение цены">
+									<input class="range-input" type="text" value="30000">
+								</label>
+							</div>
+						</fieldset>
+
+
+
+
 					<fieldset>
 						<legend>Производители:</legend>
 						<ul class="brands-list">
@@ -349,8 +361,10 @@
 
 				<!-- MODAL CARD -->
 				<section class="modal modal-card">
+					<div class="modal-main">
 					<h2 class="visually-hidden">Оформление заказа</h2>
 					<span>Товар добавлен в корзину!</span>
+				</div>
 					<div class="modal-background">
 						<a class="btn-checkout" href="#">Оформить заказ</a>
 						<button class="btn-continue-shopping" type="button">Продолжить покупки</button>

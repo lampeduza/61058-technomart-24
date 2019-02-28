@@ -517,7 +517,7 @@ input[type="radio"].visually-hidden {
 /* MAIN */
 
 .main {
-	padding-top: 59px;
+	padding-top: 19px;
 	padding-bottom: 86px;
 }
 
@@ -835,10 +835,20 @@ input[type="radio"].visually-hidden {
 	color: #32425c;
 	background-color: #f2f6f8;
 	text-transform: uppercase;
-	margin-top: 25px;
+	margin-top: 20px;
 	display: flex;
 	padding: 30px 0 29px 30px;
 }
+
+
+
+
+
+
+
+
+
+
 
 /* FILTER */
 
@@ -860,7 +870,88 @@ input[type="radio"].visually-hidden {
 	line-height: 18px;
 	background-color: #f7f3ec;
 	padding: 10px 0 10px 18px;
+	margin-bottom: 0;
 }
+
+.filter-item {
+	margin-top: 15px;
+}
+
+.filter-item-title {
+	margin: 0;
+}
+
+.range-controls {
+	position: relative;
+	width: 220px;
+	height: 80px;
+	margin-top: 20px;
+	margin-bottom: 9px;
+	background-color: #f7f3ec;
+	border-radius: 3px;
+	padding: 39px 20px;
+}
+
+.range-scale {
+	height: 2px;
+	width: 180px;
+	background-color: #d7dcde;
+}
+
+.bar {
+	width: 160px;
+	height: 2px;
+	background-color: #00ca74;
+}
+
+.range-toggle {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background-color: transparent;
+	width: 20px;
+	height: 20px;
+	border: none;
+}
+
+.range-toggle::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.35);
+}
+
+.range-toggle::after {
+	content: '';
+	position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+	width: 4px;
+	height: 4px;
+	background-color: #ababab;
+	border-radius: 50%;
+}
+
+.range-toggle-min {
+	left: 20px;
+}
+
+.range-toggle-max {
+	left: 160px;
+}
+
+
+
+
+
+
+
 
 fieldset {
 	border: none;
@@ -899,6 +990,7 @@ legend {
 	line-height: 20px;
 	margin: 0;
 }
+
 
 .filter-option {
 	padding-left: 34px;
@@ -1873,12 +1965,21 @@ legend {
 }
 
 /* modal */
-
+.modal {
+	display: none;
+}
 
 /* modal feedback */
 .modal-feedback {
-	position: relative;
+	position: fixed;
+	z-index: 10;
+	top: 50%;
+	margin-top: -215px;
+	left: 50%;
+	margin-left: -310px;
 	width: 620px;
+	box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+	margin-bottom: 50px;
 }
 
 .feedback-form {
@@ -1966,6 +2067,7 @@ legend {
 	top: 16px;
 	right: 9px;
 	cursor: pointer;
+	background-color: transparent;
 }
 
 .modal-feedback .modal-close::before,
@@ -2019,7 +2121,12 @@ legend {
 	width: 940px;
 	height: 446px;
 	box-shadow: 0 0 15px 1px rgba(47, 42, 43, 0.5);
-	position: relative;
+	position: fixed;
+	z-index: 10;
+	top: 50%;
+	margin-top: -223px;
+	left: 50%;
+	margin-left: -470px;
 }
 
 .modal-map .modal-close {
@@ -2057,8 +2164,19 @@ legend {
 .modal-card {
 	width: 620px;
 	height: 282px;
+	margin-bottom: 100px;
 	border-top: 7px solid #ee3643;
-	position: relative;
+	position: fixed;
+	top: 50%;
+	margin-top: -140px;
+	left: 50%;
+	margin-left: -310px;
+	z-index: 10;
+	box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+}
+
+.modal-main {
+	background-color: #fff;
 }
 
 .modal-card span {
