@@ -1998,9 +1998,7 @@ legend {
 }
 
 .footer-social li {
-	display: flex;
 	margin-right: 4px;
-	border-radius: 50%;
 }
 
 .footer-social li:last-child {
@@ -2008,45 +2006,35 @@ legend {
 }
 
 .btn-social {
+	display: block;
 	background-color: #212a3a;
+	background-repeat: no-repeat;
 	width: 42px;
 	height: 42px;
-	position: relative;
 	border-radius: 50%;
 }
 
-.btn-social::before {
-	position: absolute;
-	content: '';
-	display: block;
-	width: 42px;
-	height: 42px;
-	top: 50%;
-	transform: translateY(-50%);
-}
 
-.btn-social-vk::before {
+.btn-social-vk {
 	background-image: url('../img/icons/vk-icon.svg');
-	background-repeat: no-repeat;
-	width: 26px;
-	height: 15px;
-	left: 9px;
+	background-size: 26px 15px;
+	background-position: 8px 11px;
 }
 
-.btn-social-fb::before {
+.btn-social-fb {
 	background-image: url('../img/icons/fb-icon.svg');
-	background-repeat: no-repeat;
-	width: 12px;
-	height: 22px;
-	left: 15px;
+	background-size: 12px 22px;
+	background-position: 14px 8px;
 }
 
-.btn-social-i::before {
+.btn-social-i {
 	background-image: url('../img/icons/insta-icon.svg');
-	background-repeat: no-repeat;
-	width: 21px;
-	height: 21px;
-	left: 10px;
+	background-size: 21px 21px;
+	background-position: 8px 8px;
+}
+
+.btn-social {
+	background-position: 50%;
 }
 
 .btn-social:hover,
@@ -2055,7 +2043,6 @@ legend {
 }
 
 .btn-social:focus {
-	outline: none;
 	background-color: #ee3643;
 }
 
