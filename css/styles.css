@@ -2034,7 +2034,7 @@ legend {
 }
 
 .btn-social {
-	background-position: 50%;
+	background-position: 50% 50%;
 }
 
 .btn-social:hover,
@@ -2108,6 +2108,8 @@ legend {
 	margin-left: -310px;
 	width: 620px;
 	box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+
+	display: block;
 }
 
 .feedback-form {
@@ -2129,30 +2131,28 @@ legend {
 	width: 220px;
 }
 
-.feedback-email-item {
-	margin: 0;
-	width: 220px;
+.feedback-name-item:nth-child(2) {
+	margin-right: 0;
 }
 
-.feedback-message-item {
+.feedback-name-item:nth-child(3) {
 	margin: 0;
 	margin-top: 22px;
 	margin-bottom: 37px;
-	flex-grow: 1;
+	width: 100%;
 }
 
 
-.feedback-name-item label,
-.feedback-email-item label,
-.feedback-message-item label {
+.feedback-label,
+.feedback-label,
+.feedback-label {
 	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 18px;
 	line-height: 18px;
 }
 
-.feedback-name-item input[type="text"],
-.feedback-email-item input[type="email"],
-.feedback-message-item textarea[name="message"] {
+.feedback-input,
+.feedback-content-area {
 	box-sizing: border-box;
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
@@ -2162,24 +2162,23 @@ legend {
 	margin-top: 13px;
 }
 
-.feedback-name-item input[type="text"],
-.feedback-email-item input[type="email"] {
+.feedback-input {
 	width: 220px;
 	padding: 8px 16px 8px 16px;
 }
 
-.feedback-form input:hover,
-.feedback-form textarea:hover {
+.feedback-input:hover,
+.feedback-content-area:hover {
 	border-color: #b5b5b5;
 }
 
-.feedback-form input:focus,
-.feedback-form textarea:focus {
+.feedback-input:focus,
+.feedback-content-area:focus {
 	border-color: #ee3643;
 	outline: none;
 }
 
-.feedback-message-item textarea[name="message"] {
+.feedback-content-area {
 	width: 460px;
 	height: 114px;
 	padding: 13px 16px 13px 16px;
