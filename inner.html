@@ -59,7 +59,7 @@
 		</div>
 	</header>
 	<!-- MAIN -->
-	<main class="main">
+	<main class="main-inner">
 		<!-- breakdcrumbs -->
 		<div class="container">
 		<ul class="breadcrumbs">
@@ -76,9 +76,6 @@
 				<h2 class="visually-hidden">Каталог товаров</h2>
 				<form class="filter" method="get" action="https://echo.htmlacademy.ru">
 					<span class="filter-title">Фильтр:</span>
-
-
-
 					<fieldset class="filter-item">
 						<legend class="filter-item-title">Цена:</legend>
 
@@ -94,18 +91,15 @@
 							<label class="min-price" aria-label="Минимальное значение цены">
 								<input class="range-input" type="text" value="0">
 							</label>
-							<span>-</span>
+							<span>&#8211;</span>
 							<label class="max-price" aria-label="Максимальное значение цены">
 								<input class="range-input" type="text" value="30000">
 							</label>
 						</div>
 						
 					</fieldset>
-
-
-
 					<fieldset class="filter-item-brands">
-						<legend class='filter-item-title'>Производители:</legend>
+						<legend>Производители:</legend>
 						<ul class="brands-list">
 							<li class="filter-option">
 								<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Bosch" id="filter-bosch" checked>
@@ -129,8 +123,8 @@
 							</li>
 						</ul>
 					</fieldset>
-					<fieldset>
-						<legend>Питание:</legend>
+					<fieldset class="fieldset-item-power">
+						<legend class="fieldset-item-title">Питание:</legend>
 						<ul class="power-list">
 							<li class="filter-option">
 								<input class="visually-hidden filter-input filter-input-radio" type="radio" name="power" value="battery" id="filter-battery" checked>
@@ -151,11 +145,11 @@
 				<div class="sorting">
 					<span class="sorting-title">Сортировка:</span>
 					<ul class="sorting-list">
-						<li><a class="by-price" href="#">По цене</a></li>
-						<li><a class="by-type" href="#">По типу</a></li>
-						<li><a class="by-functionality" href="#">По функционалу</a></li>
-						<li><a class="arrow-up" aria-label="по возрастанию"></a></li>
-						<li><a class="arrow-down" aria-label="по убыванию"></a></li>
+						<li><a class="sorting-link by-price sorting-link-current" href="#">По цене</a></li>
+						<li><a class="sorting-link by-type" href="#">По типу</a></li>
+						<li><a class="sorting-link by-functionality" href="#">По функционалу</a></li>
+						<li><a class="sorting-link arrow-up" aria-label="по возрастанию"></a></li>
+						<li><a class="sorting-link arrow-down" aria-label="по убыванию"></a></li>
 					</ul>
 				</div>
 
@@ -305,7 +299,7 @@
 						<section class="perforator-about">
 							<div class="container">
 								<h2>Пара слов о перфораторах</h2>
-								<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+								<p>Перфоратор &#8211; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
 							</div>
 							</section>
 						</div>
