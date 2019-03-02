@@ -1157,6 +1157,10 @@ legend {
 	display: block;
 }
 
+.catalog-item:hover img {
+	display: none;
+}
+
 .catalog-item-flag {
 	background: url('../img/new flag.png') no-repeat 0 0;
 	position: absolute;
@@ -1726,9 +1730,13 @@ legend {
 }
 
 /* для отображения слайдов */
+
+/*
 .delivery-slider {
 	display: ;
 }
+
+*/
 
 .warranty-slider {
 	display: none;
@@ -1756,7 +1764,7 @@ legend {
 
 .information-row {
 	display: flex;
-	align-items: top;
+	align-items: flex-start;
 	justify-content: space-between;
 }
 
