@@ -2251,7 +2251,7 @@ input[type='radio'].visually-hidden {
 }
 
 .feedback-input,
-.feedback-content-area {
+.feedback-content-aria {
 	box-sizing: border-box;
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
@@ -2267,17 +2267,17 @@ input[type='radio'].visually-hidden {
 }
 
 .feedback-input:hover,
-.feedback-content-area:hover {
+.feedback-content-aria:hover {
 	border-color: #b5b5b5;
 }
 
 .feedback-input:focus,
-.feedback-content-area:focus {
+.feedback-content-aria:focus {
 	border-color: #ee3643;
 	outline: none;
 }
 
-.feedback-content-area {
+.feedback-content-aria {
 	width: 460px;
 	height: 114px;
 	padding: 13px 16px 13px 16px;
@@ -2429,4 +2429,25 @@ input[type='radio'].visually-hidden {
 
 .modal-show {
 	display: block;
+	animation-name: bounce;
+	animation-duration: 0.6s;
+}
+
+.modal-error {
+	animation-name: shake;
+	animation-duration: 0.6s;
+}
+
+
+@keyframes bounce {
+	0% { transform: translateY(-2000px); }
+	70% { transform: translateY(30px); }
+	90% { transform: translateY(-10px); }
+	100% { transform: translateY(0); }
+}
+
+@keyframes shake {
+	0%, 100% { transform: translateX(0); }
+	10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+	20%, 40%, 60%, 80% { transform: translateX(10px); }
 }

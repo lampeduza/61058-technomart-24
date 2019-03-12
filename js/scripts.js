@@ -9,29 +9,55 @@ if (modalFeedback) {
     var form = modalFeedback.querySelector(".feedback-form");
     var login = modalFeedback.querySelector("[name=name]");
     var email = modalFeedback.querySelector("[name=email]");
-    var storage = localStorage.getItem("login");
+
+    var isStorageSupport = true;
+    var storage = "";
+
+    try {
+    	storage = localStorage.getItem("login");
+    } catch (err) {
+    	isStorageSupport = false;
+    }
 
     writeUsLink.addEventListener("click", function (evt) {
 	    evt.preventDefault();
 	    modalFeedback.classList.add("modal-show");
-	    email.focus();
+
 	    if (storage) {
 	    	login.value = storage;
+	    	email.focus();
+	    } else {
+	    	login.focus();
 	    }
-});
+    });
 
-closeFeedback.addEventListener("click", function (evt) {
-	evt.preventDefault();
-	modalFeedback.classList.remove("modal-show");
-});
+    closeFeedback.addEventListener("click", function (evt) {
+	    evt.preventDefault();
+	    modalFeedback.classList.remove("modal-show");
+	    modalFeedback.classList.remove("modal-error");
+    });
 
-form.addEventListener("submit", function(evt) {
-	if (!login.value || !email.value) {
-		evt.preventDefault();
-	    console.log("Нужно ввести логин и пароль");
-	}
-});
-};
+    form.addEventListener("submit", function(evt) {
+	    if (!login.value || !email.value) {
+		    evt.preventDefault();
+	        modalFeedback.classList.add("modal-error");
+	    } else {
+	    	if (isStorageSupport) {
+	    		localStorage.setItem("login", login.value);
+	    	}
+	    }
+    });
+
+        window.addEventListener("keydown", function(evt) {
+    	if (evt.keyCode === 27) {
+    		if (modalFeedback.classList.contains("modal-show")) {
+    			evt.preventDefault();
+    			modalFeedback.classList.remove("modal-show");
+    			modalFeedback.classList.remove("modal-error");
+    		}
+    	}
+    });
+}
 
 // modal  map
 
@@ -44,13 +70,22 @@ if (modalMap) {
 	mapLink.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	modalMap.classList.add("modal-show");
-});
+    });
 
-closeMap.addEventListener("click", function (evt) {
+    closeMap.addEventListener("click", function (evt) {
 	    evt.preventDefault();
 	    modalMap.classList.remove("modal-show");
-});
-};
+    });
+
+    window.addEventListener("keydown", function (evt) {
+    	if (evt.keyCode === 27) {
+    		if (modalMap.classList.contains("modal-show")) {
+    			evt.preventDefault();
+    			modalMap.classList.remove("modal-show");
+    		}
+    	}
+    });
+}
 
 // modal card
 
@@ -58,15 +93,30 @@ var bookmarkLink = document.querySelector(".catalog-item-bookmarks");
 var modalCard = document.querySelector(".modal-card");
 
 if (modalCard) {
+	var continueShoppingLink = modalCard.querySelector(".btn-continue-shopping");
 	var closeCard = modalCard.querySelector(".modal-close")
 
-    bookmarkLink.addEventListener("click", function (evt) {
-	evt.preventDefault();
-	modalCard.classList.add("modal-show");
-});
+	bookmarkLink.addEventListener("click", function (evt) {
+	    evt.preventDefault();
+	    modalCard.classList.add("modal-show");
+    });
 
-closeCard.addEventListener("click", function (evt) {
-	evt.preventDefault();
-	modalCard.classList.remove("modal-show");
-});
-};
+    continueShoppingLink.addEventListener("click", function(evt) {
+		evt.preventDefault();
+		modalCard.classList.remove("modal-show");
+	});
+
+    closeCard.addEventListener("click", function (evt) {
+	    evt.preventDefault();
+	    modalCard.classList.remove("modal-show");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+    	if (evt.keyCode === 27) {
+    		if (modalCard.classList.contains("modal-show")) {
+    			evt.preventDefault();
+    			modalCard.classList.remove("modal-show");
+    		}
+    	}
+    });
+}
