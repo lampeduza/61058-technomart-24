@@ -2311,6 +2311,22 @@ input[type='radio'].visually-hidden {
 	margin-left: -470px;
 }
 
+.modal-map p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	margin: 0;
+}
+
+.modal-map iframe {
+	position: relative;
+	z-index: 2;
+
+	border: 0;
+}
+
 /* modal card */
 .modal-card {
 	width: 620px;
@@ -2395,6 +2411,7 @@ input[type='radio'].visually-hidden {
 	cursor: pointer;
 	background-color: transparent;
 	outline: none;
+	z-index: 3;
 }
 
 .modal-close::before,

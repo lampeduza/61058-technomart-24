@@ -6,57 +6,59 @@ var modalFeedback = document.querySelector(".modal-feedback");
 
 if (modalFeedback) {
 	var closeFeedback = modalFeedback.querySelector(".modal-close");
-    var form = modalFeedback.querySelector(".feedback-form");
-    var login = modalFeedback.querySelector("[name=name]");
-    var email = modalFeedback.querySelector("[name=email]");
+	var form = modalFeedback.querySelector(".feedback-form");
+	var login = modalFeedback.querySelector("[name=name]");
+	var email = modalFeedback.querySelector("[name=email]");
 
-    var isStorageSupport = true;
-    var storage = "";
+	var isStorageSupport = true;
+	var storage = "";
 
-    try {
-    	storage = localStorage.getItem("login");
-    } catch (err) {
-    	isStorageSupport = false;
-    }
+	try {
+		storage = localStorage.getItem("login");
+	} catch (err) {
+		isStorageSupport = false;
+	}
 
-    writeUsLink.addEventListener("click", function (evt) {
-	    evt.preventDefault();
-	    modalFeedback.classList.add("modal-show");
+	writeUsLink.addEventListener("click", function (evt) {
+		evt.preventDefault();
+		modalFeedback.classList.add("modal-show");
 
-	    if (storage) {
-	    	login.value = storage;
-	    	email.focus();
-	    } else {
-	    	login.focus();
-	    }
-    });
+		if (storage) {
+			login.value = storage;
+			email.focus();
+		} else {
+			login.focus();
+		}
+	});
 
-    closeFeedback.addEventListener("click", function (evt) {
-	    evt.preventDefault();
-	    modalFeedback.classList.remove("modal-show");
-	    modalFeedback.classList.remove("modal-error");
-    });
+	closeFeedback.addEventListener("click", function (evt) {
+		evt.preventDefault();
+		modalFeedback.classList.remove("modal-show");
+		modalFeedback.classList.remove("modal-error");
+	});
 
-    form.addEventListener("submit", function(evt) {
-	    if (!login.value || !email.value) {
-		    evt.preventDefault();
-	        modalFeedback.classList.add("modal-error");
-	    } else {
-	    	if (isStorageSupport) {
-	    		localStorage.setItem("login", login.value);
-	    	}
-	    }
-    });
+	form.addEventListener("submit", function(evt) {
+		if (!login.value || !email.value) {
+			evt.preventDefault();
+			modalFeedback.classList.remove("modal-error");
+			modalFeedback.offsetWidth = modalFeedback.offsetWidth; // не понимаю строку кода
+			modalFeedback.classList.add("modal-error");
+		} else {
+			if (isStorageSupport) {
+				localStorage.setItem("login", login.value);
+			}
+		}
+	});
 
-        window.addEventListener("keydown", function(evt) {
-    	if (evt.keyCode === 27) {
-    		if (modalFeedback.classList.contains("modal-show")) {
-    			evt.preventDefault();
-    			modalFeedback.classList.remove("modal-show");
-    			modalFeedback.classList.remove("modal-error");
-    		}
-    	}
-    });
+	window.addEventListener("keydown", function(evt) {
+		if (evt.keyCode === 27) {
+			evt.preventDefault();
+			if (modalFeedback.classList.contains("modal-show")) {
+				modalFeedback.classList.remove("modal-show");
+				modalFeedback.classList.remove("modal-error");
+			}
+		}
+	});
 }
 
 // modal  map
