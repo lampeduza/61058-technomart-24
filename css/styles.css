@@ -1473,14 +1473,42 @@ input[type='radio'].visually-hidden {
 	margin-right: 46px;
 }
 
-/*
 .arrow-up,
 .arrow-down {
-	display: block;
-	width: 0;
-	height: 0;
+	width: 11px;
+	height: 10px;
+	fill: #c5c5c5;
+	border: none;
 }
-*/
+
+.arrow-down {
+	margin-left: 21px;
+}
+
+.arrow-up:hover,
+.arrow-down:hover {
+	text-decoration: none;
+	border: none;
+}
+
+.arrow-up svg,
+.arrow-down svg {
+	fill: #c5c5c5;
+}
+
+.arrow-up svg:hover,
+.arrow-down svg:hover {
+	fill: rgba(0, 0, 0, 0.2);
+}
+
+.arrow-up svg:active,
+.arrow-down svg:active {
+	fill: #ee3643;
+}
+
+.arrow-up-current svg {
+	fill: #ee3643;
+}
 
 /* brands */
 .popular-products-title {

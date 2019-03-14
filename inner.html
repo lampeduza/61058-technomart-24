@@ -13,7 +13,7 @@
   <header class="main-header">
     <div class="header-top-wrapper">
       <div class="container header-top-row">
-      	<!-- header logo -->
+        <!-- header logo -->
         <a class="header-logo-link" href="index.html">
           <img class="header-logo" src="img/icons/header-logo.svg" width="111" height="18" alt="Логотип Техномарта">
         </a>
@@ -35,7 +35,7 @@
     </div>
     <!-- user navigation -->
     <div class="container user-navigation-row">
-    	<!-- page title -->
+      <!-- page title -->
       <h1 class="page-title">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</h1>
       <div class="navigation-contacts">
         <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="container">
-    	<!-- main-navigation -->
+      <!-- main-navigation -->
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
@@ -78,7 +78,7 @@
     </div>
     <!-- filter row -->
     <div class="container main-filter-row">
-    	<!-- filters' section -->
+      <!-- filters' section -->
       <section class="filters">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -147,15 +147,23 @@
         </form>
       </section>
       <div class="product-list-column">
-      	<!-- sorting -->
+        <!-- sorting -->
         <div class="sorting">
           <span class="sorting-title">Сортировка:</span>
           <ul class="sorting-list">
             <li><a class="sorting-link by-price sorting-link-current" href="#">По цене</a></li>
             <li><a class="sorting-link by-type" href="#">По типу</a></li>
             <li><a class="sorting-link by-functionality" href="#">По функционалу</a></li>
-            <li><a class="sorting-link arrow-up arrow-up-current" aria-label="по возрастанию"></a></li>
-            <li><a class="sorting-link arrow-down" aria-label="по убыванию"></a></li>
+            <li>
+            	<a class="sorting-link arrow-up arrow-up-current" aria-label="по возрастанию">
+            		<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path d="M5.5 0L0 10h11z"/></svg>
+            	</a>
+            </li>
+            <li>
+            	<a class="sorting-link arrow-down" aria-label="по убыванию">
+            		<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10"><path d="M5.5 10L0 0h11"/></svg>
+            	</a>
+            </li>
           </ul>
         </div>
         <!-- CATALOG ITEMS -->
@@ -312,9 +320,9 @@
     <!-- footer top -->
     <div class="footer-top">
       <div class="container footer-top-row">
-      	<!-- footer contacts -->
+        <!-- footer contacts -->
         <div class="footer-contact">
-        	<!-- footer logo -->
+          <!-- footer logo -->
           <a class="footer-logo-link" href="index.html">
             <img class="footer-logo" src="img/icons/footer-logo.svg" width="138" height="23" alt="Логотип Техномарта">
           </a>
@@ -373,7 +381,6 @@
       <button class="modal-close" type="button" aria-label="Закрыть модальное окно"></button>
     </div>
   </section>
-
   <script src="js/scripts.js"></script>
 </body>
 </html>
