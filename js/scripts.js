@@ -91,7 +91,7 @@ if (modalMap) {
 
 // modal card
 
-var bookmarkLink = document.querySelector(".catalog-item-bookmarks");
+var bookmarkLink = document.querySelector(".catalog-item-buy");
 var modalCard = document.querySelector(".modal-card");
 
 if (modalCard) {
