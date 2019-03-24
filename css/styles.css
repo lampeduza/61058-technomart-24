@@ -18,16 +18,6 @@
 	     url('../fonts/cuprumbold.woff') format('woff');
 }
 
-/* Cuprum bold italic */
-@font-face {
-	font-family: 'Cuprum';
-	font-weight: 700;
-	font-style: italic;
-	font-display: swap;
-	src: url('../fonts/cuprumbolditalic.woff2') format('woff2'),
-	     url('../fonts/cuprumbolditalic.woff') format('woff');
-}
-
 /* Cuprum italic */
 @font-face {
 	font-family: 'Cuprum';
@@ -165,8 +155,7 @@ input[type='radio'].visually-hidden {
 .search-input {
 	width: 270px;
 	height: 42px;
-	padding-left: 48px;
-	padding-bottom: 3px;
+	padding: 14px 0 16px 49px;
 	background-color: #293448;
 	border: none;
 	font-family: inherit;
@@ -585,6 +574,7 @@ input[type='radio'].visually-hidden {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	box-shadow: inset 0px -5px 0 0 #293449;
 }
 
 .site-navigation a {
@@ -1107,7 +1097,7 @@ input[type='radio'].visually-hidden {
 	text-align: center;
 	background-color: #f7f3ec;
 	width: 95px;
-	padding: 10px 5px 10px 5px;
+	padding: 10px 5px 10px 10px;
 	border: none;
 	border-radius: 3px;
 }
@@ -1495,7 +1485,7 @@ input[type='radio'].visually-hidden {
 
 .popular-products-btn {
 	padding: 10px 55px;
-
+	min-width: 253px;
 }
 
 .popular-products-items {
@@ -1550,6 +1540,7 @@ input[type='radio'].visually-hidden {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-wrap: wrap;
 	margin: 7px 0 7px 0;
 }
 
@@ -1570,6 +1561,16 @@ input[type='radio'].visually-hidden {
 }
 
 .sorting-link-current {
+	color: #ee3643;
+	border-bottom-style: none;
+}
+
+.sorting-link-current:hover {
+	color: #ee3643;
+	border-bottom-style: none;
+}
+
+.sorting-link-current:active {
 	color: #ee3643;
 	border-bottom-style: none;
 }
@@ -1647,7 +1648,8 @@ input[type='radio'].visually-hidden {
 }
 
 .popular-brands-title .brands-btn {
-	padding: 10px 70px 10px 69px;
+    padding: 10px 70px 10px 69px;
+    min-width: 253px;
 }
 
 .brands-items {
@@ -1699,6 +1701,25 @@ input[type='radio'].visually-hidden {
 	opacity: 0.3;
 }
 
+.brands-interscol img {
+	margin-bottom: 13px;
+	margin-right: 2px;
+}
+
+.brands-hitachi img {
+	margin-left: 5px;
+	margin-top: 4px;
+}
+
+.brands-lg img {
+	margin-right: 3px;
+}
+
+.brands-metabo img {
+	margin-bottom: 6px;
+	margin-left: 4px;
+}
+
 /* pagination list */
 .pagination-list {
 	list-style: none;
@@ -1726,7 +1747,7 @@ input[type='radio'].visually-hidden {
 	line-height: 18px;
 	margin-right: 10px;
 	border: 1px solid #e5e5e5;
-	border-radius: 2px;
+	border-radius: 3px;
 	min-width: 38px;
 	height: 38px;
 	text-transform: uppercase;
@@ -1829,6 +1850,7 @@ input[type='radio'].visually-hidden {
 	color: #fff;
 	font-size: 21px;
 	line-height: 30px;
+	font-weight: 700;
 	display: block;
 	padding: 16px 23px;
 	background-color: #32425c;
@@ -1837,9 +1859,13 @@ input[type='radio'].visually-hidden {
 	text-align: left;
 }
 
-.services-control-current {
-	background-color: #fff;
-	color: #32425c;
+.services-control:nth-child(2) {
+	border-top: 1px solid #405069;
+	border-bottom: 1px solid #293449;
+}
+
+.services-control:nth-child(3) {
+	border-top: 1px solid #405069;
 }
 
 .services-control:hover {
@@ -1857,12 +1883,43 @@ input[type='radio'].visually-hidden {
 	color: #32425c;
 }
 
-/* delivery-slider */
+.services-control-current {
+	background-color: #fff;
+	color: #32425c;
+}
+
+.services-control-current:hover {
+	background-color: #fff;
+	color: #32425c;
+}
+
+.services-control-current:active {
+	background-color: #fff;
+	color: #32425c;
+}
+
+.services-control-current:focus {
+	background-color: #fff;
+	color: #32425c;
+}
+
+/* delivery-slide */
 .delivery-slide {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	width: 620px;
+	position: relative;
+}
+
+.delivery-slide::before {
+	content: '';
+	background-image: url("../img/delivery-truck.png");
+	width: 468px;
+	height: 261px;
+	position: absolute;
+	top: 24px;
+	right: 1px;
 }
 
 .delivery-slider-content {
@@ -1893,22 +1950,26 @@ input[type='radio'].visually-hidden {
 	font-size: 13px;
 	line-height: 24px;
 	width: 275px;
+	z-index: 50;
 }
 
-.delivery-img {
-	width: 468px;
-	height: 261px;
-	position: absolute;
-	top: 24px;
-	right: 1px;
-}
-
-/* warranty slidery */
+/* warranty slide */
 .warranty-slide {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	width: 620px;
+	position: relative;
+}
+
+.warranty-slide::before {
+	content: '';
+	background-image: url("../img/warranty-medal.png");
+	width: 389px;
+	height: 283px;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .warranty-slider-content {
@@ -1939,22 +2000,25 @@ input[type='radio'].visually-hidden {
 	font-size: 13px;
 	line-height: 24px;
 	width: 379px;
+	z-index: 50;
 }
 
-.warranty-img {
-	width: 389px;
-	height: 283px;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-/* credit slider */
+/* credit slide */
 .credit-slide {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	width: 620px;
+}
+
+.credit-slide::before {
+	content: '';
+	background-image: url("../img/credit-cash.png");
+	width: 465px;
+	height: 285px;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .credit-slider-content {
@@ -1986,6 +2050,7 @@ input[type='radio'].visually-hidden {
 	font-size: 13px;
 	line-height: 24px;
 	width: 279px;
+	z-index: 50;
 }
 
 .credit-btn {
@@ -1993,21 +2058,9 @@ input[type='radio'].visually-hidden {
 	padding: 10px 44px;
 }
 
-.credit-img {
-	width: 465px;
-	height: 285px;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-/* для отображения слайдов */
-
-
 /*
-
 .delivery-slide {
-	display: ;
+	display: none;
 }
 
 */
@@ -2032,7 +2085,7 @@ input[type='radio'].visually-hidden {
 }
 
 .information {
-	padding-top: 82px;
+	padding-top: 77px;
 	padding-bottom: 86px;
 }
 
