@@ -390,7 +390,7 @@ input[type='radio'].visually-hidden {
 }
 
 .address {
-	width: 250px;
+	width: 260px;
 	color: #32425c;
 	font-size: 14px;
 	line-height: 24px;
@@ -450,23 +450,26 @@ input[type='radio'].visually-hidden {
 	padding: 12px 10px;
 }
 
-.person-container {
+
+.page-user-control {
 	margin-left: auto;
 }
 
-.person-link {
-	font-size: 21px;
-	line-height: 21px;
+.user-wrapper {
+	width: 299px;
+	padding: 10px 65px 10px 45px;
 	background-color: #fff;
-	color: #000;
-	padding: 12px 66px 12px 47px;
-	width: 300px;
-	display: block;
 	position: relative;
 }
 
-.person-link::before,
-.person-link::after {
+.user-name {
+	font-size: 21px;
+	line-height: 21px;
+	color: #000;
+}
+
+.user-name::before,
+.user-exit::after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -479,32 +482,40 @@ input[type='radio'].visually-hidden {
     opacity: 0.2;
 }
 
-.person-link::before {
+.user-name::before {
 	left: 13px;
 	background-image: url('../img/icons/icon-user.svg');
 	height: 18px;
 }
 
-.person-link::after {
+.user-exit::after {
 	right: 11px;
 	background-image: url('../img/icons/icon-logout.svg');
 	height: 17px;
 }
 
+
 /* Состояния для login-link & registration-link */
-.person-link:hover::before,
-.person-link:hover::after {
+.user-name:hover::before,
+.user-exit:hover::after {
 	opacity: 1;
+	fill: #405069;
 }
 
-.person-link:active {
+.user-name:active {
 	opacity: 0.3;
-}
-
-.person-link:active {
 	color: rgba(0, 0, 0, 0.3);
 }
+
+.user-name:active::before,
+.user-exit:active::after {
+	fill: #c5c5c5;
+}
 /* --------------------------------- */
+
+.page-user-control {
+	margin-left: 51px;
+}
 
 .order-link {
 	margin-left: 18px;
@@ -1437,7 +1448,7 @@ input[type='radio'].visually-hidden {
 
 .catalog-item-price {
 	width: 120px;
-	padding: 11px 20px 11px 35px;
+	padding: 11px 5px 11px 35px;
 	margin-left: 42px;
 	margin-bottom: 21px;
 	color: #fff;
@@ -1481,11 +1492,13 @@ input[type='radio'].visually-hidden {
 	color: #32425c;
 	text-transform: uppercase;
 	margin: 0;
+	margin-right: 25px;
 }
 
 .popular-products-btn {
 	padding: 10px 55px;
 	min-width: 253px;
+	flex-shrink: 0;
 }
 
 .popular-products-items {
@@ -1645,11 +1658,13 @@ input[type='radio'].visually-hidden {
     color: #32425c;
     text-transform: uppercase;
     margin: 0;
+    margin-right: 25px;
 }
 
 .popular-brands-title .brands-btn {
     padding: 10px 70px 10px 69px;
     min-width: 253px;
+    flex-shrink: 0;
 }
 
 .brands-items {
@@ -1857,30 +1872,25 @@ input[type='radio'].visually-hidden {
 	border: none;
 	cursor: pointer;
 	text-align: left;
-}
-
-.services-control:nth-child(2) {
-	border-top: 1px solid #405069;
-	border-bottom: 1px solid #293449;
-}
-
-.services-control:nth-child(3) {
-	border-top: 1px solid #405069;
+	box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
 }
 
 .services-control:hover {
 	background-color: #293449;
+	box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
 }
 
 .services-control:active {
 	background-color: #fff;
 	color: #32425c;
+	box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
 }
 
 .services-control:focus {
 	outline: none;
 	background-color: #fff;
 	color: #32425c;
+	box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
 }
 
 .services-control-current {
@@ -2085,8 +2095,8 @@ input[type='radio'].visually-hidden {
 }
 
 .information {
-	padding-top: 77px;
-	padding-bottom: 86px;
+	padding-top: 82px;
+	padding-bottom: 85px;
 }
 
 .information-row {
@@ -2257,7 +2267,7 @@ input[type='radio'].visually-hidden {
 	background-color: #ca2c37;
 }
 
-.footer-logo:active {
+.footer-logo-link:active {
 	background-color: #ba2732;
 }
 
