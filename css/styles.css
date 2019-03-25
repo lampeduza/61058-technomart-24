@@ -341,7 +341,7 @@ input[type='radio'].visually-hidden {
 	width: 197px;
 	margin: 0;
 	margin-left: 52px;
-	margin-right: 71px;
+	margin-right: 70px;
 	margin-top: 3px;
 	color: #ee3643;
 	font-size: 16px;
@@ -456,50 +456,60 @@ input[type='radio'].visually-hidden {
 }
 
 .user-wrapper {
-	width: 299px;
-	padding: 10px 65px 10px 45px;
+	width: 300px;
+	height: 45px;
 	background-color: #fff;
-	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 .user-name {
 	font-size: 21px;
 	line-height: 21px;
 	color: #000;
+	position: relative;
+	padding: 10px 5px 10px 47px;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 }
 
-.user-name::before,
-.user-exit::after {
+.user-name::before {
 	content: '';
-	display: block;
 	position: absolute;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	    -ms-transform: translateY(-50%);
 	        transform: translateY(-50%);
-    background-repeat: no-repeat;
-    width: 20px;
+	display: block;
+	left: 0px;
     opacity: 0.2;
-}
-
-.user-name::before {
-	left: 13px;
 	background-image: url('../img/icons/icon-user.svg');
-	height: 18px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 20px 18px;
+	width: 47px;
+	height: 45px;
+	
 }
 
-.user-exit::after {
-	right: 11px;
+.user-exit {
+	width: 43px;
+	height: 45px;
 	background-image: url('../img/icons/icon-logout.svg');
-	height: 17px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 20px 17px;
+	margin-left: auto;
+	opacity: 0.2;
 }
 
 
 /* Состояния для login-link & registration-link */
 .user-name:hover::before,
-.user-exit:hover::after {
+.user-exit:hover {
 	opacity: 1;
-	fill: #405069;
 }
 
 .user-name:active,
@@ -582,7 +592,8 @@ input[type='radio'].visually-hidden {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	box-shadow: inset 0px -5px 0 0 #293449;
+	-webkit-box-shadow: inset 0px -5px 0 0 #293449;
+	        box-shadow: inset 0px -5px 0 0 #293449;
 }
 
 .site-navigation a {
@@ -1495,7 +1506,8 @@ input[type='radio'].visually-hidden {
 .popular-products-btn {
 	padding: 10px 55px;
 	min-width: 253px;
-	flex-shrink: 0;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 
 .popular-products-items {
@@ -1550,7 +1562,8 @@ input[type='radio'].visually-hidden {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin: 7px 0 7px 0;
 }
 
@@ -1661,7 +1674,8 @@ input[type='radio'].visually-hidden {
 .popular-brands-title .brands-btn {
     padding: 10px 70px 10px 69px;
     min-width: 253px;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }
 
 .brands-items {
@@ -1869,30 +1883,36 @@ input[type='radio'].visually-hidden {
 	border: none;
 	cursor: pointer;
 	text-align: left;
-	box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+	-webkit-box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+	        box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
 }
 
 .services-control:hover {
 	background-color: #293449;
-	box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
+	-webkit-box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
+	        box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
 }
 
 .services-control:active {
 	background-color: #fff;
 	color: #32425c;
-	box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
+	-webkit-box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
+	        box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
 }
 
 .services-control:focus {
 	outline: none;
 	background-color: #fff;
 	color: #32425c;
-	box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
+	-webkit-box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
+	        box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
 }
 
 .services-control-current {
 	background-color: #fff;
 	color: #32425c;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 .services-control-current:hover {
@@ -1900,14 +1920,12 @@ input[type='radio'].visually-hidden {
 	color: #32425c;
 }
 
-.services-control-current:active {
-	background-color: #fff;
-	color: #32425c;
-}
-
+.services-control-current:active,
 .services-control-current:focus {
 	background-color: #fff;
 	color: #32425c;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 }
 
 /* delivery-slide */
