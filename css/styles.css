@@ -502,15 +502,12 @@ input[type='radio'].visually-hidden {
 	fill: #405069;
 }
 
-.user-name:active {
+.user-name:active,
+.user-exit:active {
 	opacity: 0.3;
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.user-name:active::before,
-.user-exit:active::after {
-	fill: #c5c5c5;
-}
 /* --------------------------------- */
 
 .page-user-control {
