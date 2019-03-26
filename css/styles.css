@@ -1896,16 +1896,12 @@ input[type='radio'].visually-hidden {
 .services-control:active {
 	background-color: #fff;
 	color: #32425c;
-	-webkit-box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
-	        box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
 }
 
 .services-control:focus {
 	outline: none;
 	background-color: #fff;
 	color: #32425c;
-	-webkit-box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
-	        box-shadow: 0px 1px 0 0 #fff, inset 0px 1px 0 0 #fff;
 }
 
 .services-control-current {
@@ -1918,14 +1914,18 @@ input[type='radio'].visually-hidden {
 .services-control-current:hover {
 	background-color: #fff;
 	color: #32425c;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
-.services-control-current:active,
+.services-control-current:active {
+	background-color: #fff;
+	color: #32425c;
+}
+
 .services-control-current:focus {
 	background-color: #fff;
 	color: #32425c;
-	-webkit-box-shadow: none;
-	        box-shadow: none;
 }
 
 /* delivery-slide */
