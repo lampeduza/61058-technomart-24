@@ -1,6 +1,5 @@
 # Личный проект «Техномарт»
 
-* Студент: [Марк Леммер](https://up.htmlacademy.ru/htmlcss/24/user/61058).
 * Наставник: `Алексей Корякин` (https://htmlacademy.ru/profile/alexeycorr).
 
 ---
